@@ -1,3 +1,15 @@
+@font-face {
+  font-family: socialMediaIcons;
+  src: url(/assets/Social-Media-Circled.woff) ;
+}
+
+.social-media {
+  font-family: socialMediaIcons;
+  // font-size: 20px;
+  // font-weight: bold;
+  // color: green;
+}
+
 .App {
   display:flex;  
   flex-direction: row;
@@ -129,4 +141,12 @@
   animation-name: grow;
   animation-duration: .5s;
   //font-size: 50px;
+}
+
+
+.bar {
+  width: 30px;
+  height: 5px;
+  background-color: mediumblue;
+  margin: 5px 0;
 }

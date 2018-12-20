@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.scss';
+
+import instagram from './instagram.svg';
+import linkedin from './linkedin.svg';
+import github from './github.svg';
+
+
+
+
+
+
+
 
 class App extends Component {
   render() {
@@ -11,20 +22,26 @@ class App extends Component {
             <div className='card' style={{ height:'30vh', width:'inherit', margin: 5 }}>
               <img style={{height: '27vh'}} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
             </div>
-            <div className='card' style={{ height:'10vh', width:'inherit', margin: 5, display: 'inline' }}>
-              <h1 style={{ fontSize: '.9em', color: 'orangered' }}>Cherith Simmons</h1>
+            <div className='card' style={{ height:'20vh', width:'inherit', margin: 5, display: 'inline', lineHeight: 1.5 }}>
+              <h1 style={{ fontSize: '2em', color: 'orangered', margin: 0 }}>Cherith Simmons</h1>
               <p style={{ fontSize: '.6em', color: 'mediumblue' }}>FRONT END DEVELOPER</p>
+              <img src={github} style={{ height: '3vh'}} />
+              <img src={linkedin} style={{ height: '3vh'}} />
+              <img src={instagram} style={{ height: '3vh'}} />
             </div>
-            <div className='card' style={{ height:'45vh', width:'inherit',marginTop: '40vh', position:'absolute' }}></div>
+            <div className='card' style={{ height:'35vh', width:'inherit',marginTop: '40vh', position:'absolute' }}></div>
           </div>          
         </div>
 
 
         <div className="card" style={{width:"65vw", height: "85vh", marginTop: '8vh', position: 'relative'}} >
-          <div className='card' style={{height:'5vh', width:'inherit', position:'absolute'}}></div>
-          {/* <div>
-            <p style={{ fontSize: '100px', color: 'mediumblue', position: 'absolute' }}>Hello my name is Cherith and I'm a front end developer.</p>
-          </div> */}
+          <div className='card' style={{height:'5vh', width:'inherit', position:'absolute'}}>
+            <div style={{marginLeft: '1vw', marginTop: '.3vh'}}>
+              <div className='bar'/>
+              <div className='bar'/>
+              <div className='bar'/>
+            </div>
+          </div>
         </div>               
       </div>
     );
