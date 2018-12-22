@@ -17,58 +17,44 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="card" style={{width: "20vw", height: "85vh", marginTop: '5vh', marginLeft: '5%',position: 'relative', backgroundColor: 'gold', marginRight: '3%'}}>
-          {/* <div className="card" style={{height:'80vh', width:'20vw', flexDirection:'column', background: 'transparent' }}> */}
-            <div className='card' style={{ height:'85vh', width:'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection:'column', paddingLeft: 10 }}>
-              <h1 style={{fontSize: '2em', margin: 0, marginBottom: 15}} >Profile</h1>
-              <img style={{width:'15vw', border: '5px solid #353434'}} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
-              <div style={{ height:'40vh', width:'inherit', margin: 5, display: 'inline', lineHeight: 1.5 }}>
-                <h1 style={{ fontSize: '2em', color: 'orangered', margin: 0 }}>Cherith Simmons</h1>
-                <p style={{ fontSize: '.6em', color: 'mediumblue' }}>FRONT END DEVELOPER</p>
+        <div className="card" style={{ width: "20vw", height: "85vh", marginTop: '5vh', marginLeft: '5%', position: 'relative', backgroundColor: 'gold', marginRight: '3%' }}>
+          <div className='card' style={{ height: '85vh', width: '18vw', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', padding: '10px 15px' }}>
+            <h1 style={{ fontSize: '2em', margin: 0, marginBottom: 15, marginTop: 15, fontWeight: 600 }} >Profile</h1>
+            <img style={{ width: '15vw', border: '5px solid #353434', marginLeft: '5%' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
+            <div style={{ height: '40vh', width: 'inherit', margin: 5, display: 'inline', lineHeight: 1.5, textAlign: 'center' }}>
+              <div style={{ lineHeight: 2 }}>
+                <h1 style={{ fontSize: '1.5em', color: 'orangered', margin: 0 }}>CHERITH SIMMONS</h1>
                 <div>
-                  <img src={github} style={{ height: '3vh'}} />
-                  <img src={linkedin} style={{ height: '3vh'}} />
-                  <img src={instagram} style={{ height: '3vh'}} />
+                  <img src={github} style={{ height: '3vh' }} />
+                  <img src={linkedin} style={{ height: '3vh' }} />
+                  <img src={instagram} style={{ height: '3vh' }} />
                 </div>
-              </div>  
-            {/* </div> */}
-            {/* <div className='card' style={{ height:'20vh', width:'inherit', margin: 5, display: 'inline', lineHeight: 1.5 }}>
-              <h1 style={{ fontSize: '2em', color: 'orangered', margin: 0 }}>Cherith Simmons</h1>
-              <p style={{ fontSize: '.6em', color: 'mediumblue' }}>FRONT END DEVELOPER</p>
-              <div>
-                <img src={github} style={{ height: '3vh'}} />
-                <img src={linkedin} style={{ height: '3vh'}} />
-                <img src={instagram} style={{ height: '3vh'}} />
               </div>
-            </div> */}
-            {/* <div className='card' style={{ height:'35vh', width:'inherit',marginTop: '40vh', position:'absolute' }}></div> */}
-          </div>          
-        </div>
-
-
-        <div className="card" style={{width:"65vw", height: "85vh", marginTop: '5vh', position: 'relative'}} >
-          <div className='card' style={{height:'5vh', width:'inherit', position:'absolute'}}>
-            <div style={{marginLeft: '1vw', marginTop: '.3vh'}}>
-              <div className='bar'/>
-              <div className='bar'/>
-              <div className='bar'/>
+              <p style={{ fontSize: '.6em', color: 'mediumblue' }}>I am a FRONT END DEVELOPER.</p> <br />
+              <p style={{ fontSize: '1em', color: 'mediumblue' }}>
+                Don't worry.  I'm not here to tell you about how much I love coffee or my favorite breweries.
+                However, I will copy / paste a quote that genuinely pops into my head about once a week.
+              </p>
+            </div>
+            <div className='card' style={{ height: '5vh', backgroundColor: 'white', border: '5px solid mediumblue', justifyContent: 'center', flexDirection: 'center', alignItems: 'center', cursor: 'pointer' }}>
+              <h4 style={{ color: 'mediumblue' }} >MESSAGE</h4>
             </div>
           </div>
-        </div>               
+        </div>
+
+        <div className="card" style={{ width: "60vw", height: "85vh", marginTop: '5vh', marginLeft: '5%', backgroundColor: 'gold' }}>
+          <div className='card' style={{  width: 'inherit', height: '85vh', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', position:'absolute' }}>
+            <div style={{ height: '10vh', width: 'inherit', border: '1px solid mediumblue', }}></div>
+            <div style={{ height: '85vh', width: '20vw', border: '1px solid mediumblue', }}>
+              <div style={{ height: '15vh', width: '20vw', border: '1px solid mediumblue', }}></div>
+              <div style={{ height: '15vh', width: '20vw', border: '1px solid mediumblue', }}></div>
+              <div style={{ height: '15vh', width: '20vw', border: '1px solid mediumblue', }}></div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
 
 export default App;
-
-
-  {/* <div className="menu" style={{ paddingLeft: 30, display: 'none' }}>
-          <h1 style={{ fontSize: 100, color: 'rgb(253, 221, 44)' }}>PROJECTS</h1>
-          <div style={{ fontSize: 15 }}>
-            <h2 style={{ fontWeight: 100 }}>☺ MASH-app</h2>
-            <h2 style={{ fontWeight: 100 }}>☺ react-native-prototype</h2>
-            <h2 style={{ fontWeight: 100 }}>☺ react-header-component</h2>
-          </div>
-        </div> */}
-        {/* </div> */}
