@@ -1,0 +1,42 @@
+{
+  "navlinks": [
+    {
+      "name": "Projects",
+      "subNav": [
+        {
+          "name": "Mash",
+          "url": ""
+        },
+        {
+          "name": "Slo",
+          "url": ""
+        },
+        {
+          "name": "Personal Website",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "name": "Experience",
+      "subNav": [
+        {
+          "name": "U.S. Bank",
+          "url": ""
+        },
+        {
+          "name": "Haworth Marketing + Media",
+          "url": ""
+        },
+        {
+          "name": "space150",
+          "url": ""
+        },
+        {
+          "name": "Software Guild",
+          "url": ""
+        }
+      ]
+    }
+  ]
+}
