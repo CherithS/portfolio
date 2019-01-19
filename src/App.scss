@@ -17,7 +17,7 @@
   // background-image: linear-gradient(to top, #ffa07a, #ffb1b4, #ffcce2, #fae7fa, #ffffff);
   // background-image: radial-gradient(circle, #ffa07a, #fea886, #fdb192, #fcb99e, #fac1aa);
   //background-image: radial-gradient(circle, #ffa07a, #ffb1b4, #ffcbe1, #f8e6f9, #fdfdfd);
-  background-color: #FEEFF0;
+  background-color:white;
   //background-image: url('./assets/backgrounds/Stampel-Screen-Saver-6.jpg');
   background-size: cover;
   height: 100vh;
@@ -45,7 +45,7 @@
 
 .card {
   display: flex;
-  border: solid 3px mediumblue;
+  border: solid 2px #ffc9cd;
  // border-radius: 20px;
   //background-color: #F9E8E1;
   //opacity: .6;
@@ -79,7 +79,7 @@
   }
 
   h1 {
-    color: mediumblue;
+    color: #1b1b20;
     font-size: 200px;
   }
 
@@ -91,21 +91,40 @@
 
   .skills {
      height: 6vh;
-     width: 15vw;
-     border: 1px solid mediumblue;
+     //width: 15vw;
+    // border: 1px solid mediumblue;
      display: flex;
      flex-direction: row; 
      margin: 5; 
      font-size: 75%;
      color: mediumblue;
      margin: 10px;
-     justify-content: center;
+     justify-content: left;
+
+     border: .1px solid transparent;
+     width: 200px;
+     height: 40px;
+     opacity: .9;
+     margin-top: -10px;
+     text-align: left;
   }
 
   .skills:hover{
     background-color: mediumblue;
     color: white;
     cursor: pointer;
+  }
+
+  .background-block {
+    background-color: white;
+    border: none;
+    margin-top: 20px;
+  }
+
+  h2 {
+    text-decoration: underline;
+    text-decoration-color: mediumaquamarine;
+    font-weight: 500;
   }
 }
 
@@ -171,4 +190,6 @@
   background-color: mediumblue;
   margin: 5px 0;
 }
+
+
 
