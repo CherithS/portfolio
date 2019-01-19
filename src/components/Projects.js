@@ -1,20 +1,37 @@
 import React, { Component } from 'react';
 
-class ProjectsDropdown extends Component {
+class Projects extends Component {
     render() {
-        return (<div style={{ display:'flex', flexDirection: 'row', backgroundColor: 'transparent' }}>           
-            <h1 style={{ display: 'flex', width:'15vw', margin: 0, fontSize: '1em', color: '#F73F6E', cursor: 'pointer',  border: '1px solid mediumblue', paddingLeft: '15px', backgroundColor: 'transparent'  }}>M.A.S.H.</h1>
-            <h1 style={{ display: 'flex', width:'15vw', margin: 0, fontSize: '1em', color: '#F73F6E', cursor: 'pointer', border: '1px solid mediumblue', paddingLeft: '15px', backgroundColor: 'transparent'  }}>SLO</h1>
-            <h1 style={{ display: 'flex', width:'15vw', margin: 0, fontSize: '1em', color: '#F73F6E', cursor: 'pointer', border: '1px solid mediumblue', paddingLeft: '15px', backgroundColor: 'transparent'  }}>Personal website</h1>
-        </div>         
+        return (
+            <div>
+                <div style={{ display: 'flex', flexDirection: 'row', width: '60vw', marginTop: '5vh', justifyContent: 'space-evenly' }}>
+                    <div className="card " style={{ width: "25vw", height: "50vh", marginLeft: '1%', backgroundColor: 'rgb(254, 239, 240)', border: 'none' }}>
+                        <div className='card' style={{ width: 'inherit', height: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', position: 'absolute', backgroundColor: 'transparent', justifyContent: 'center', alignItems: 'center' }}>
+                            <h1 style={{ color: 'mediumblue', fontSize: '100%' }}>M.A.S.H.</h1>
+                        </div>
+                    </div>
+                    <div className="card " style={{ width: "25vw", height: "50vh", marginLeft: '1%', backgroundColor: 'rgb(254, 239, 240)', border: 'none' }}>
+                        <div className='card' style={{ width: 'inherit', height: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', position: 'absolute', backgroundColor: 'transparent', justifyContent: 'center', alignItems: 'center' }}>
+                            <h1 style={{ color: 'mediumblue', fontSize: '100%' }}>FaceSpace</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'row', width: '60vw', justifyContent: 'space-evenly', marginTop: '5%' }}>
+                    <div className="card " style={{ width: "25vw", height: "50vh", marginLeft: '1%', backgroundColor: 'rgb(254, 239, 240)', border: 'none' }}>
+                        <div className='card' style={{ width: 'inherit', height: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', position: 'absolute', backgroundColor: 'transparent', justifyContent: 'center', alignItems: 'center' }}>
+                            <h1 style={{ color: 'mediumblue', fontSize: '100%' }}>SLO</h1>
+                        </div>
+                    </div>
+                    <div className="card " style={{ width: "25vw", height: "50vh", marginLeft: '1%', backgroundColor: 'rgb(254, 239, 240)', border: 'none' }}>
+                        <div className='card' style={{ width: 'inherit', height: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', position: 'absolute', backgroundColor: 'transparent', justifyContent: 'center', alignItems: 'center' }}>
+                            <h1 style={{ color: 'mediumblue', fontSize: '100%' }}>this.website</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
 
-export default ProjectsDropdown;
-
-                // <div >
-                //     <div style={{ width:'fit-content', border: '1px solid white', }}><h2>M.A.S.H.</h2></div>
-                //     <div style={{ width:'fit-content', border: '1px solid white', }}><h2>SLO</h2></div>
-                //     <div style={{ width:'fit-content', border: '1px solid white', }}><h2>The very website you're looking at now...</h2></div>
-                // </div> , backgroundColor: 'transparent'
+export default Projects;

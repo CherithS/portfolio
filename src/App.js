@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.scss';
 
-import ProjectsDropdown from './components/Projects';
+import Projects from './components/Projects';
 import ExperienceDropdown from './components/Experience';
 
 import instagram from './instagram.svg';
 import linkedin from './linkedin.svg';
 import github from './github.svg';
-
-
-
 
 
 
@@ -45,7 +42,7 @@ class App extends Component {
       {/* PROFILE */}
         <div className="card" style={{ width: "12vw", height: "88vh", marginTop: '5vh', marginLeft: '2vw', position: 'relative', border:'none', backgroundColor: '#FEEFF0', marginRight: '3%' }}>
           <div className='card' style={{ height: '85vh', width: '10vw', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', padding: '10px 15px', backgroundColor: 'transparent' }}>
-            <img style={{ width: '10vw', border: '3px solid #ffc9cd', marginLeft: '5%' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
+            <img style={{ borderRadius:'50%', width: '10vw', border: '3px solid #ffc9cd', marginLeft: '5%' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
             <div style={{ height: '40vh', width: 'inherit', margin: 5, display: 'inline', lineHeight: 1.5, textAlign: 'center' }}>
               <div style={{ lineHeight: 2 }}>
                 <h1 style={{ fontSize: '1.5em', color: 'mediumblue', margin: 0 }}>CHERITH SIMMONS</h1>
@@ -69,33 +66,8 @@ class App extends Component {
         </div>
 
         {/* MAIN */}
-        <div>
-          {/* ROW 1 */}
-          <div style={{ display: 'flex', flexDirection: 'row', width: '60vw', marginTop: '5vh', justifyContent:'space-evenly'}}>
-            <div className="card " style={{ width: "25vw", height: "50vh", marginLeft: '1%', backgroundColor: 'rgb(254, 239, 240)', border: 'none' }}>
-              <div className='card' style={{ width: 'inherit', height: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', position: 'absolute', backgroundColor: 'transparent', justifyContent:'center', alignItems:'center' }}>
-                <h1 style={{ color: 'mediumblue', fontSize: '100%' }}>M.A.S.H.</h1>
-              </div>
-            </div>
-            <div className="card " style={{ width: "25vw", height: "50vh", marginLeft: '1%', backgroundColor: 'rgb(254, 239, 240)', border: 'none' }}>
-              <div className='card' style={{ width: 'inherit', height: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', position: 'absolute', backgroundColor: 'transparent', justifyContent:'center', alignItems:'center' }}>
-                <h1 style={{ color: 'mediumblue', fontSize: '100%' }}>FaceySpace</h1>
-              </div>
-            </div>
-          </div>
-          {/* ROW 2 */}
-          <div style={{ display: 'flex', flexDirection: 'row', width: '60vw', justifyContent:'space-evenly', marginTop: '5%' }}>
-            <div className="card " style={{ width: "25vw", height: "50vh", marginLeft: '1%', backgroundColor: 'rgb(254, 239, 240)', border: 'none' }}>
-              <div className='card' style={{ width: 'inherit', height: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', position: 'absolute', backgroundColor: 'transparent', justifyContent:'center', alignItems:'center' }}>
-                <h1 style={{ color: 'mediumblue', fontSize: '100%' }}>SLO</h1>
-              </div>
-            </div>
-            <div className="card " style={{ width: "25vw", height: "50vh", marginLeft: '1%', backgroundColor: 'rgb(254, 239, 240)', border: 'none' }}>
-              <div className='card' style={{ width: 'inherit', height: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', position: 'absolute', backgroundColor: 'transparent', justifyContent:'center', alignItems:'center' }}>
-                <h1 style={{ color: 'mediumblue', fontSize: '100%' }}>this.website</h1>
-              </div>
-            </div>
-          </div>
+        <div style={{height: '88vh', marginTop: '5vh'}}>
+          <Projects />
         </div> 
 
         
@@ -104,7 +76,7 @@ class App extends Component {
         <div className="card" style={{ width: "12vw", height: "88vh", marginTop: '5vh', marginLeft: '2vw', position: 'relative', border: 'none', backgroundColor: '#FEEFF0', marginRight: '3%' }}>
           <div className='card' style={{ height: '85vh', width: '10vw', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', padding: '10px 15px', backgroundColor: 'transparent' }}>
           {/* <div style={{display:'flex', fontSize: '10%', width: 'inherit'}}><h1>Project Description: </h1></div> */}
-          <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width:'inherit' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap', width:'inherit' }}>
               <div className="card skills">
                 <h2>React</h2>
               </div>
