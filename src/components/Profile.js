@@ -22,14 +22,15 @@ class Profile extends Component {
     render() {
         return (
             <div style={{ marginRight: '3vw' }}>
-                <div className="card" style={{ width: "12vw", height: "88vh", marginTop: '5vh', marginLeft: '2vw', position: 'relative', border: 'none', backgroundColor: '#FEEFF0', marginRight: '3%' }}>
-                    <div className='card' style={{ height: '85vh', width: '10vw', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', padding: '10px 15px', justifyContent:'space-evenly', backgroundColor: 'transparent' }}>
-                        <Box>
+            {/* backgroundColor: '#FEEFF0', */}
+                <div className="card" style={{ width: "12vw", height: "88vh",  marginLeft: '2vw', position: 'relative', border: 'none', marginRight: '3%', boxShadow: '-10px 15px mediumaquamarine' }}>
+                    <div className='card' style={{ height: '85vh', width: '10vw', flexDirection: 'column', padding: '10px 15px', justifyContent:'space-evenly', backgroundColor: 'transparent' }}>
+                        {/* <Box> */}
                             <img style={{ borderRadius: '50%', width: '10vw', border: '3px solid #ffc9cd', marginLeft: '5%' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
                             <div style={{ width: '15vw' }}>`
                                 <h1 style={{ fontSize: '1.5em', color: '#343435', margin: 0, textDecoration: 'underline', textDecorationColor: 'mediumaquamarine', marginBottom: '10px' }}>CHERITH SIMMONS</h1>
                             </div>
-                        </Box>
+                        {/* </Box> */}
                         <div style={{ height: '40vh', width: 'inherit', margin: 5, display: 'inline', lineHeight: 1.5, textAlign: 'center' }}>
                             <Box>
                                 <p style={{fontSize: '12px', textAlign: 'left'}}><span style={{fontWeight: 800}}>Likes:</span> Challenging convos, sushi, Netflix, learning, ethically-made clothing</p>

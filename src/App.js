@@ -62,7 +62,7 @@ class App extends Component {
           </div>
         </Intro>
 
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', height: '95vh' }}>
           <Profile />
 
           <ProjectSection>

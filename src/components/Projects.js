@@ -6,7 +6,7 @@ const Row = styled.div`
     display: flex;
     flex-direction: row;
     width: fit-content;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     justify-content: space-evenly;
 `;
 
