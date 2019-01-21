@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import styled from 'styled-components';
 import './App.scss';
 
 import Projects from './components/Projects';
@@ -10,17 +10,25 @@ import linkedin from './linkedin.svg';
 import github from './github.svg';
 
 
+const ProjectSection = styled.div`
+  display: flex;
+  height: 88vh;
+  width: 55vw;
+  flex-flow: wrap;
+`;
+
+
 
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       showProjectsDropdown: false,
       showExperienceDropdown: false
     };
-  } 
+  }
 
 
   showProjects() {
@@ -39,10 +47,10 @@ class App extends Component {
     return (
       <div className="App">
 
-      {/* PROFILE */}
-        <div className="card" style={{ width: "12vw", height: "88vh", marginTop: '5vh', marginLeft: '2vw', position: 'relative', border:'none', backgroundColor: '#FEEFF0', marginRight: '3%' }}>
+        {/* PROFILE */}
+        <div className="card" style={{ width: "12vw", height: "88vh", marginTop: '5vh', marginLeft: '2vw', position: 'relative', border: 'none', backgroundColor: '#FEEFF0', marginRight: '3%' }}>
           <div className='card' style={{ height: '85vh', width: '10vw', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', padding: '10px 15px', backgroundColor: 'transparent' }}>
-            <img style={{ borderRadius:'50%', width: '10vw', border: '3px solid #ffc9cd', marginLeft: '5%' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
+            <img style={{ borderRadius: '50%', width: '10vw', border: '3px solid #ffc9cd', marginLeft: '5%' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
             <div style={{ height: '40vh', width: 'inherit', margin: 5, display: 'inline', lineHeight: 1.5, textAlign: 'center' }}>
               <div style={{ lineHeight: 2 }}>
                 <h1 style={{ fontSize: '1.5em', color: 'mediumblue', margin: 0 }}>CHERITH SIMMONS</h1>
@@ -53,10 +61,10 @@ class App extends Component {
               </p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <div className='card' style={{width:'10vw', height: '5vh', backgroundColor: 'transparent', border: '5px solid mediumblue', justifyContent: 'center', flexDirection: 'center', alignItems: 'center', cursor: 'pointer' }}>
+              <div className='card' style={{ width: '10vw', height: '5vh', backgroundColor: 'transparent', border: '5px solid mediumblue', justifyContent: 'center', flexDirection: 'center', alignItems: 'center', cursor: 'pointer' }}>
                 <h4 style={{ color: 'mediumblue' }} >MESSAGE</h4>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-evenly', width: '7vw', marginTop: '1vh'}}>
+              <div style={{ display: 'flex', justifyContent: 'space-evenly', width: '7vw', marginTop: '1vh' }}>
                 <img src={github} style={{ height: '3vh' }} />
                 <img src={linkedin} style={{ height: '3vh' }} />
                 <img src={instagram} style={{ height: '3vh' }} />
@@ -66,18 +74,32 @@ class App extends Component {
         </div>
 
         {/* MAIN */}
-        <div style={{height: '88vh', marginTop: '5vh'}}>
-          <Projects />
-        </div> 
+        <ProjectSection>
+          <Projects name="M.A.S.H." />
+          <Projects name="SLO" />
+          <Projects name="FaceSpace" />
+          <Projects name="this.website" />
+        </ProjectSection>
 
-        
 
-         {/* SIDE DETAILS */}
-        <div className="card" style={{ width: "12vw", height: "88vh", marginTop: '5vh', marginLeft: '2vw', position: 'relative', border: 'none', backgroundColor: '#FEEFF0', marginRight: '3%' }}>
-          <div className='card' style={{ height: '85vh', width: '10vw', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', padding: '10px 15px', backgroundColor: 'transparent' }}>
-          {/* <div style={{display:'flex', fontSize: '10%', width: 'inherit'}}><h1>Project Description: </h1></div> */}
-          <div style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap', width:'inherit' }}>
-              <div className="card skills">
+
+        {/* SIDE DETAILS */}
+        <div className="card" style={{ height: "88vh", width: '25vw', marginTop: '5vh', marginLeft: '2vw', position: 'relative', border: 'none', backgroundColor: '#FEEFF0', marginRight: '3%' }}>
+          <div className='card' style={{ height: '85vh', width: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', padding: '10px 15px', backgroundColor: 'transparent' }}>
+         
+          <div><h2>Industries</h2></div>
+            <div style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap', height: 'auto%' }}>
+                <div className="skills">
+                  <h2>Advertising</h2>
+                </div>
+                <div className="skills">
+                  <h2>Finances + Banking</h2>
+                </div>
+            </div>
+
+            <div><h2>Technologies</h2></div>
+            <div style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap', height: '70%' }}>
+              <div className="skills">
                 <h2>React</h2>
               </div>
               <div className="card skills">
