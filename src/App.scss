@@ -5,23 +5,12 @@
 
 .social-media {
   font-family: socialMediaIcons;
-  // font-size: 20px;
-  // font-weight: bold;
-  // color: green;
 }
 
 .App {
   display:flex;  
-  flex-direction: row;
-  //background-color: #FFA07A;
-  // background-image: linear-gradient(to top, #ffa07a, #ffb1b4, #ffcce2, #fae7fa, #ffffff);
-  // background-image: radial-gradient(circle, #ffa07a, #fea886, #fdb192, #fcb99e, #fac1aa);
-  //background-image: radial-gradient(circle, #ffa07a, #ffb1b4, #ffcbe1, #f8e6f9, #fdfdfd);
+  flex-direction: column;
   background-color:white;
-  //background-image: url('./assets/backgrounds/Stampel-Screen-Saver-6.jpg');
-  // background-size: cover;
-  // height: 100vh;
-  // width: 100vw;
 }
 
 .App-header {
@@ -35,6 +24,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+h1 {
+  color: rgb(52, 52, 53);
+}
+
+p {
+  color: rgb(52, 52, 53);
 }
 
 @keyframes grow {
@@ -96,12 +93,6 @@
      text-align: left;
   }
 
-  // .skills:hover{
-  //   background-color: mediumblue;
-  //   color: white;
-  //   cursor: pointer;
-  // }
-
   .background-block {
     background-color: white;
     border: none;
@@ -112,6 +103,11 @@
     text-decoration: underline;
     text-decoration-color: mediumaquamarine;
     font-weight: 500;
+  }
+
+  h2:hover{
+    // font-weight: 800;
+    // cursor: pointer;
   }
 }
 
