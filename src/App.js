@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div className="App">
         <Intro>
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: 'flex', marginBottom: '14vh' }}>
             <div style={{ marginLeft: '10vw' }}>
               <div style={{ display: 'flex', fontSize: '25px' }}><p>
                 <span style={{fontWeight: 800, fontSize: '45px'}}>Hello</span>

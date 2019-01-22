@@ -19,7 +19,7 @@ class Experience extends Component {
             <div>
                  {/* backgroundColor: '#FEEFF0', */}
                 <div className="card" style={{ height: "88vh", width: '25vw', position: 'relative', border: 'none', marginRight: '3%', }}>
-                    <div className='card' style={{ height: '85vh', width: 'inherit', margin: 5, marginLeft: 15, marginTop: 15, flexDirection: 'column', padding: '10px 15px',boxShadow: '10px 5px mediumaquamarine', backgroundColor: 'transparent' }}>
+                    <div className='card' style={{ height: '85vh', width: 'inherit', margin: 5, marginLeft: 15, flexDirection: 'column', padding: '10px 15px', boxShadow: '10px 15px mediumaquamarine', backgroundColor: 'transparent' }}>
 
                         <div><h2 style={{fontWeight:800}}>Industries</h2></div>
                         <div style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap', height: 'auto%' }}>
@@ -35,14 +35,14 @@ class Experience extends Component {
 
 
                         <div style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap', height: '70%', }}>
-                            <Box>
-                                <h1 style={{fontSize: '14px', fontWeight: 500, color: 'rgb(52, 52, 53)'}}>
+                            
+                                {/* <h1 style={{fontSize: '14px', fontWeight: 400, color: 'rgb(52, 52, 53)'}}>
                                 React, React Native, Redux, Node.js, ES6, Angular 4+, HTML5, CSS3, SASS, Flexbox, GIT,
                                 Agile, JIRA, NPM, Unit Testing, AJAX, Restful APIs, Webpack, SPA, JSON, Responsive Design, 
                                 Gulp, Grunt, OOP, C#, .Net Core, Rapid Prototyping, a11y, Wireframing, Interactive Design,
                                 Cross  Device Development, Photoshop, Illustrator, Adobe XD, Sketch, After Effects, UX Design, UI Design
-                                </h1>
-                                {/* <div className="skills">
+                                </h1> */}
+                                <div className="skills">
                                     <h2>React</h2>
                                 </div>
                                 <div className="card skills">
@@ -107,8 +107,8 @@ class Experience extends Component {
                                 </div>
                                 <div className="card skills">
                                     <h2>JSON</h2>
-                                </div> */}
-                            </Box>
+                                </div>
+                            
                         </div>
                     </div>
                 </div>
