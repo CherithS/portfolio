@@ -13,10 +13,16 @@ const Row = styled.div`
 const Card = styled.div `
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 90%;
     width: 25vw;
     background: rgb(254, 239, 240);
     border: none;
+
+    :hover{
+        height: 95%;
+        background: transparent;
+        transition: .6s ease-in-out;
+    }
 
     .outline {
         display:flex;
@@ -30,6 +36,12 @@ const Card = styled.div `
         align-items: center;
         display: flex;
         border: solid 2px #ffc9cd;
+    }
+
+    .outline:hover {      
+        margin: 0px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
     }
 `;
 
