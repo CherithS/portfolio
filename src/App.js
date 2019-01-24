@@ -31,14 +31,36 @@ const Intro = styled.div`
     justify-content: center;
 `;
 
+const greetings = ['Hola', 'Bonjour', 'Oh hai', 'Hello'];
+
+const projects = [
+  {id: 1, title: 'M.A.S.H.', content: ''},
+  {id: 2, title: 'SLO', content: ''},
+  {id: 3, title: 'FaceSpace', content: ''},
+  {id: 4, title: 'this.website', content: ''}
+];
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       showProjectsDropdown: false,
       showExperienceDropdown: false
+
+
     };
+
+
+    // array of refs to Projects
+    // identitfy which one is hovered over
+    // on hover set to true and set  others to false
+    // true false
   }
+
+  playGreetings() {
+    greetings.map(g => console.log(g));
+  }
+  
 
   render() {
     return (
@@ -58,7 +80,6 @@ class App extends Component {
               <Box style={{ display:'inline', marginLeft: '1vw', fontSize: '25px' }}>front end developer</Box>              
               </span></p>
             </div>
-            {/* <div style={{ display: 'flex', alignItems: 'center' }}><p>I'm a front end developer.</p></div> */}
           </div>
         </Intro>
 
@@ -66,14 +87,17 @@ class App extends Component {
           <Profile />
 
           <ProjectSection>
-            <Projects name="M.A.S.H." />
+
+            <Projects projects={projects} />
+
+            {/* <Projects name="M.A.S.H." />
             <Projects name="SLO" />
             <Projects name="FaceSpace" />
-            <Projects name="this.website" />
+            <Projects name="this.website" /> */}
           </ProjectSection>
 
           <Experience />
-        </div>
+        </div> 
       </div>
     );
   }

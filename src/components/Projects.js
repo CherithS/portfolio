@@ -45,21 +45,32 @@ const Card = styled.div `
     }
 `;
 
+
+
 class Projects extends Component {
     constructor(props){
         super(props);
+        console.log('props: ' + props);
     }
+    
     render() {
         return (
-            <div style={{display: 'flex', flexFlow: 'wrap', width: '50%'}}>
-                <Row>
-                    <Card>
-                        <div className="outline">
-                            <h1>{this.props.name}</h1>
-                        </div>                  
-                    </Card>
-                </Row>
+            <div style={{display: 'flex', flexFlow: 'wrap'}}>                    
+                {
 
+                    this.props.projects.map((project) =>
+                        <div style={{ display: 'flex', flexFlow: 'wrap', width: '50%' }}>
+                            <Row>
+                                <Card>
+                                    <div className="outline ">
+                                        <h1 key={project.id}>
+                                            {project.title}
+                                        </h1>
+                                    </div>
+                                </Card>
+                            </Row>
+                        </div>
+                    )}
             </div>
         );
     }
