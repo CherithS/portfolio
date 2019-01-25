@@ -34,10 +34,10 @@ const Intro = styled.div`
 const greetings = ['Hola', 'Bonjour', 'Oh hai', 'Hello'];
 
 const projects = [
-  {id: 1, title: 'M.A.S.H.', content: ''},
-  {id: 2, title: 'SLO', content: ''},
-  {id: 3, title: 'FaceSpace', content: ''},
-  {id: 4, title: 'this.website', content: ''}
+  {id: 1, title: 'M.A.S.H.', content: '', hover: false, backgroundColor: 'rgb(254, 239, 240)'},
+  {id: 2, title: 'SLO', content: '', hover: false, backgroundColor: 'rgb(254, 239, 240)'},
+  {id: 3, title: 'FaceSpace', content: '', hover: false, backgroundColor: 'rgb(254, 239, 240)'},
+  {id: 4, title: 'this.website', content: '', hover: false, backgroundColor: 'rgb(254, 239, 240)'}
 ];
 
 class App extends Component {
@@ -50,17 +50,13 @@ class App extends Component {
 
     };
 
-
-    // array of refs to Projects
-    // identitfy which one is hovered over
-    // on hover set to true and set  others to false
-    // true false
   }
 
   playGreetings() {
     greetings.map(g => console.log(g));
   }
   
+
 
   render() {
     return (
@@ -87,13 +83,7 @@ class App extends Component {
           <Profile />
 
           <ProjectSection>
-
-            <Projects projects={projects} />
-
-            {/* <Projects name="M.A.S.H." />
-            <Projects name="SLO" />
-            <Projects name="FaceSpace" />
-            <Projects name="this.website" /> */}
+            <Projects projects={projects}  />
           </ProjectSection>
 
           <Experience />

@@ -15,14 +15,14 @@ const Card = styled.div `
     flex-direction: row;
     height: 90%;
     width: 25vw;
-    background: rgb(254, 239, 240);
+    /* background: rgb(254, 239, 240); */
     border: none;
+    transition: .3s ease-in-out;
 
-    :hover{
+    /* :hover{
         height: 95%;
-        background: transparent;
         transition: .6s ease-in-out;
-    }
+    } */
 
     .outline {
         display:flex;
@@ -38,19 +38,54 @@ const Card = styled.div `
         border: solid 2px #ffc9cd;
     }
 
-    .outline:hover {      
+    h1:hover {      
         margin: 0px;
         cursor: pointer;
         transition: .3s ease-in-out;
     }
 `;
 
-
+var projectStates = [];
+var backgroundColor = '';
 
 class Projects extends Component {
     constructor(props){
         super(props);
-        console.log('props: ' + props);
+        this.state = {
+            backgroundColor: backgroundColor,
+            projects: projectStates
+        }
+
+        this.props.projects.map((project) => {
+            projectStates.push(project);            
+        });
+    }
+
+    trackHoverIn(project) {
+        console.log('in!');
+        var index = this.props.projects.indexOf(project);
+
+        projectStates[index].backgroundColor = 'rgb(254, 239, 240)';
+
+        projectStates.forEach(p => {
+             if(p.id != project.id){
+                 console.log(p.id);
+                p.backgroundColor = 'white'; }
+            });
+        this.setState({
+            project: projectStates
+        });
+    }
+
+    trackHoverOut() {
+        console.log('out!');
+        projectStates.forEach(p => { 
+            p.backgroundColor = 'rgb(254, 239, 240)'; 
+        });
+
+        this.setState({
+            project: projectStates
+        });
     }
     
     render() {
@@ -58,12 +93,16 @@ class Projects extends Component {
             <div style={{display: 'flex', flexFlow: 'wrap'}}>                    
                 {
 
-                    this.props.projects.map((project) =>
+                    this.state.projects.map((project) =>
                         <div style={{ display: 'flex', flexFlow: 'wrap', width: '50%' }}>
                             <Row>
-                                <Card>
+                                <Card                                    
+                                    style={{backgroundColor: project.backgroundColor}}>
                                     <div className="outline ">
-                                        <h1 key={project.id}>
+                                        <h1
+                                         onMouseEnter={this.trackHoverIn.bind(this, project)} 
+                                         onMouseOut={this.trackHoverOut.bind(this)} 
+                                        key={project.id}>
                                             {project.title}
                                         </h1>
                                     </div>
