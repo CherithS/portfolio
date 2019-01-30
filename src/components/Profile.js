@@ -79,7 +79,7 @@ class Profile extends Component {
             <div style={{ marginRight: '3vw' }}>
                 <Section>
                         <SectionOutline>
-                            <img style={{ borderRadius: '50%', width: '10vw', border: '3px solid #ffc9cd' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
+                            <img alt="" style={{ borderRadius: '50%', width: '10vw', border: '3px solid #ffc9cd' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
                             <div style={{ width: '15vw' }}>`
                                 <NameBox>
                                     <h1 style={{ fontSize: '1em', color: '#343435', fontWeight:800, textDecorationColor: 'mediumaquamarine' }}>CHERITH SIMMONS</h1>

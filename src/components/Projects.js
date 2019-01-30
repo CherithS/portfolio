@@ -6,7 +6,6 @@ const Row = styled.div`
     display: flex;
     flex-direction: row;
     width: fit-content;
-    /* margin-top: 5vh; */
     justify-content: space-evenly;
 `;
 
@@ -15,14 +14,8 @@ const Card = styled.div `
     flex-direction: row;
     height: 90%;
     width: 25vw;
-    /* background: rgb(254, 239, 240); */
     border: none;
     transition: .3s ease-in-out;
-
-    /* :hover{
-        height: 95%;
-        transition: .6s ease-in-out;
-    } */
 
     .outline {
         display:flex;
@@ -62,14 +55,12 @@ class Projects extends Component {
     }
 
     trackHoverIn(project) {
-        console.log('in!');
         var index = this.props.projects.indexOf(project);
 
         projectStates[index].backgroundColor = 'rgb(254, 239, 240)';
 
         projectStates.forEach(p => {
              if(p.id != project.id){
-                 console.log(p.id);
                 p.backgroundColor = 'white'; }
             });
         this.setState({
@@ -78,7 +69,6 @@ class Projects extends Component {
     }
 
     trackHoverOut() {
-        console.log('out!');
         projectStates.forEach(p => { 
             p.backgroundColor = 'rgb(254, 239, 240)'; 
         });

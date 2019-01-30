@@ -5,6 +5,7 @@ import './App.scss';
 import Profile from './components/Profile';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Background from './components/Background'
 
 
 const Box = styled.div`
@@ -31,6 +32,13 @@ const Intro = styled.div`
     justify-content: center;
 `;
 
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+`;
+
 const greetings = ['Hola', 'Bonjour', 'Oh hai', 'Hello'];
 
 const projects = [
@@ -46,8 +54,6 @@ class App extends Component {
     this.state = {
       showProjectsDropdown: false,
       showExperienceDropdown: false
-
-
     };
 
   }
@@ -55,26 +61,35 @@ class App extends Component {
   playGreetings() {
     greetings.map(g => console.log(g));
   }
-  
 
+ 
 
   render() {
     return (
       <div className="App">
         <Intro>
-          <div style={{ display: 'flex', marginBottom: '14vh' }}>
-            <div style={{ marginLeft: '10vw' }}>
-              <div style={{ display: 'flex', fontSize: '25px' }}><p>
-                <span style={{fontWeight: 800, fontSize: '45px'}}>Hello</span>
-                , my name is</p></div>
-              <h1 style={{ fontSize: '10em', color: 'rgb(52, 52, 53)', textDecoration: 'underline', textDecorationColor: 'mediumaquamarine', margin: 0 }}>
-                CHERITH <br /> SIMM<span><img style={{ borderRadius: '50%', width: '10vw', border: '3px solid #ffc9cd', verticalAlign: 'sub' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} /></span>NS
-              </h1>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', flexFlow: 'column-reverse', marginLeft: '2vw', fontSize: '25px' }}><p>and I'm a 
-              <span style={{  color: 'rgb(52, 52, 53)', fontWeight: 800, textDecoration: 'underline', textDecorationColor: 'rgb(255, 201, 205)'}}>
-              <Box style={{ display:'inline', marginLeft: '1vw', fontSize: '25px' }}>front end developer</Box>              
-              </span></p>
+          <div style={{ backgroundColor: 'transparent', height: '97vh', margin: '0px 10px 0px 10px', justifyContent: 'center', display: 'flex' }}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <Background>
+                <Container style={{ width: '40vw' }}>
+                  <div>
+                    <div><h1 style={{ fontSize: '1.5em' }}>Hello, my name is</h1></div>
+                    <div>
+                      <h1 style={{ fontSize: '5em', color: '#2E23C8', margin: 0 }}>
+                        CHERITH <br /> SIMM<span>
+                          <img style={{ borderRadius: '50%', width: '10vw', border: '3px solid #ffc9cd', verticalAlign: 'sub' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
+                        </span>NS
+                  </h1>
+                    </div>
+                  </div>
+                </Container>
+                <Container style={{ width: '5vw' }}>
+                  <h1> + </h1>
+                </Container>
+                <Container style={{ width: '25vw' }}>
+                  <h1>I'm a front end developer</h1>
+                </Container>
+              </Background>
             </div>
           </div>
         </Intro>
