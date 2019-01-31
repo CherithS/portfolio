@@ -15,18 +15,19 @@ const Vectors = styled.img`
 class Background extends Component {
     render() {
         return (
-            <div style={{ display:'flex', flexDirection: 'row', flexFlow:'wrap', position:'relative', border: 'solid pink', width: '97vw', justifyContent: 'space-between'}}>
+            // border: 'solid pink',
+            <div style={{ display:'flex', flexDirection: 'row', flexFlow:'wrap', position:'relative', width: '97vw', justifyContent: 'space-between'}}>
                 <div style={{ display:'flex', flexDirection:'column', width: '33%', height: '100%', justifyContent:'space-between'  }}>                   
-                    <img src={topLeft} style={{ width:'50%' }}/>
-                    <img src={bottomLeft} style={{ }}/>                         
+                    <img className="floating-vector" src={topLeft} style={{ width:'50%' }}/>
+                    <img className="floating-vector" src={bottomLeft} style={{ }}/>                         
                 </div>
-                <div style={{ display:'flex', width: '33%'  }}>
-                    <img src={middle} style={{  }}/>
+                <div style={{ display:'flex', width: '33%' }}>
+                    <img className="floating-vector" src={middle}/>
                 </div>
                 <div style={{display: 'flex', flexDirection:'column', width: '33%', height: '100%'}}>                      
-                    <img src={topRight} style={{ width: '50%' }}/>
-                    <img src={middleRight} style={{  }}/>                   
-                    <img src={bottomRight} style={{  }}/> 
+                    <img className="floating-vector" src={topRight} style={{ width: '50%' }}/>
+                    <img className="floating-vector" src={middleRight}/>                   
+                    <img className="floating-vector" src={bottomRight}/> 
                 </div>
             </div>
         );

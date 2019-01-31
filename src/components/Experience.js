@@ -8,16 +8,16 @@ const Box = styled.div`
     text-align: left;
     background-color: white;
     border: 1px solid pink;
-    box-shadow: 10px 15px pink;
+    box-shadow: 15px 5px #FFE600;
     padding: 15px;
 `;
 
 const ExperienceContainer = styled.div`
     height: 88vh;
-    width: 25vw;
+    width: 15vw;
     position: relative;
     border: none;
-    margin-right: 3%;
+    /* margin-right: 3%; */
 // `;
 
 const Outline = styled.div`
@@ -27,7 +27,7 @@ const Outline = styled.div`
     margin-left: 15;
     flex-direction: column;
     padding: 10px 15px;
-    box-shadow: 10px 15px mediumaquamarine;
+    box-shadow: 15px 10px #FFE600;
     background-color: transparent;
 `;
 
