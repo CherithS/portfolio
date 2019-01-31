@@ -15,16 +15,16 @@ const Vectors = styled.img`
 class Background extends Component {
     render() {
         return (
-            <div style={{ display:'flex', flexDirection: 'row', flexFlow:'wrap', border: 'solid pink', width: '97vw'}}>
-                <div style={{ display:'flex', flexDirection:'column', width: '33%', height: '100%'  }}>                   
-                    <img src={topLeft} style={{  }}/>
+            <div style={{ display:'flex', flexDirection: 'row', flexFlow:'wrap', position:'relative', border: 'solid pink', width: '97vw', justifyContent: 'space-between'}}>
+                <div style={{ display:'flex', flexDirection:'column', width: '33%', height: '100%', justifyContent:'space-between'  }}>                   
+                    <img src={topLeft} style={{ width:'50%' }}/>
                     <img src={bottomLeft} style={{ }}/>                         
                 </div>
                 <div style={{ display:'flex', width: '33%'  }}>
                     <img src={middle} style={{  }}/>
                 </div>
                 <div style={{display: 'flex', flexDirection:'column', width: '33%', height: '100%'}}>                      
-                    <img src={topRight} style={{  }}/>
+                    <img src={topRight} style={{ width: '50%' }}/>
                     <img src={middleRight} style={{  }}/>                   
                     <img src={bottomRight} style={{  }}/> 
                 </div>

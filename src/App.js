@@ -69,8 +69,10 @@ class App extends Component {
       <div className="App">
         <Intro>
           <div style={{ backgroundColor: 'transparent', height: '97vh', margin: '0px 10px 0px 10px', justifyContent: 'center', display: 'flex' }}>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Background>
+            
+          <Background> </Background>
+            <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute' }}>
+           
                 <Container style={{ width: '40vw' }}>
                   <div>
                     <div><h1 style={{ fontSize: '1.5em' }}>Hello, my name is</h1></div>
@@ -89,9 +91,10 @@ class App extends Component {
                 <Container style={{ width: '25vw' }}>
                   <h1>I'm a front end developer</h1>
                 </Container>
-              </Background>
+               
             </div>
           </div>
+          
         </Intro>
 
         <div style={{ display: 'flex', height: '95vh' }}>
