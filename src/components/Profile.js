@@ -8,11 +8,13 @@ import github from '../../src/github.svg';
 
 
 const Box = styled.div`
+    display: flex;
+    align-items: center;
     font-size: 12px;
     text-align: left;
     background-color: white;
     border: 1px solid pink;
-    box-shadow: -10px 15px pink;
+    box-shadow: 10px 15px #f3f3f3;
     padding: 15px;
     max-height: 5vh;
 `;
@@ -51,7 +53,7 @@ const Section = styled.div`
 
 const SectionOutline = styled.div`
     height: 85vh;
-    width: 8vw;
+    width: 9vw;
     flex-direction: columnn;
     padding: 10px 15px;
     justify-content: space-evenly;
@@ -80,13 +82,13 @@ const BottomProfile = styled.div`
 class Profile extends Component {
     render() {
         return (
-            <div style={{ marginRight: '3vw' }}>
+            <div style={{ }}>
                 <Section>
                     <SectionOutline>
                         <img alt="" style={{ borderRadius: '50%', width: 'inherit', border: '6px solid #ffc9cd' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
-                      
+
                         <MiddleProfile>
-                            <Box>
+                            <Box style={{flexDirection: 'column', width: '7vw', lineHeight:'.3'}}>
                                 <h1 style={{ fontSize: '1em', color: '#343435', fontWeight: 800, textDecorationColor: 'mediumaquamarine' }}>CHERITH SIMMONS</h1>
                                 <h2 style={{ fontSize: '.8em' }} >Front End Developer</h2>
                             </Box>

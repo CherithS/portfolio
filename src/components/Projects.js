@@ -9,7 +9,7 @@ const Row = styled.div`
     justify-content: space-evenly;
 `;
 
-const Card = styled.div `
+const Card = styled.div`
     display: flex;
     flex-direction: row;
     height: 90%;
@@ -38,68 +38,92 @@ const Card = styled.div `
     }
 `;
 
-var projectStates = [];
+var projects = [];
 var backgroundColor = '';
 
+var projectIndex = 1;
+var selected = projects[0];
+//var projects = this.props.projects;
+
 class Projects extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             backgroundColor: backgroundColor,
-            projects: projectStates
+            projects: projects,
+            projectIndex: 0,
+            selectedProject: projects[0]
         }
 
-        this.props.projects.map((project) => {
-            projectStates.push(project);            
-        });
+        // this.props.projects.map((project) => {
+        //     projects.push(project);
+        // });
+        this.nextProject = this.nextProject
+    }
+
+
+    nextProject(){
+        console.log('nextProject!');
+
+        console.log(this.state.projectIndex);
+
+        // this.setState({
+        //     projectIndex: 1
+        // });
     }
 
     trackHoverIn(project) {
         var index = this.props.projects.indexOf(project);
 
-        projectStates[index].backgroundColor = 'rgb(254, 239, 240)';
+        projects[index].backgroundColor = 'rgb(254, 239, 240)';
 
-        projectStates.forEach(p => {
-             if(p.id != project.id){
-                p.backgroundColor = 'white'; }
-            });
+        projects.forEach(p => {
+            if (p.id != project.id) {
+                p.backgroundColor = 'white';
+            }
+        });
         this.setState({
-            project: projectStates
+            project: projects
         });
     }
 
     trackHoverOut() {
-        projectStates.forEach(p => { 
-            p.backgroundColor = 'rgb(254, 239, 240)'; 
+        projects.forEach(p => {
+            p.backgroundColor = 'rgb(254, 239, 240)';
         });
 
         this.setState({
-            project: projectStates
+            project: projects
         });
     }
-    
-    render() {
-        return (
-            <div style={{display: 'flex', flexFlow: 'wrap'}}>                    
-                {
 
-                    this.state.projects.map((project) =>
-                        <div style={{ display: 'flex', flexFlow: 'wrap', width: '50%' }}>
-                            <Row>
-                                <Card                                    
-                                    style={{backgroundColor: project.backgroundColor}}>
-                                    <div className="outline ">
-                                        <h1
-                                         onMouseEnter={this.trackHoverIn.bind(this, project)} 
-                                         onMouseOut={this.trackHoverOut.bind(this)} 
-                                        key={project.id}>
-                                            {project.title}
-                                        </h1>
-                                    </div>
-                                </Card>
-                            </Row>
+    // border-bottom: 10px solid #fddd2c;
+    // padding-bottom: 15px;
+
+    render() {
+
+        return (
+            <div style={{ display: 'flex', flexFlow: 'wrap', flexDirection: 'row' }}>
+                {/* <div style={{ height: 50, width: 100 }}>
+                    <button style={{ height: 50, width: 100 }} onClick={this.nextProject} >Next</button>
+                </div> */}
+                {
+                    <div style={{ position: 'absolute' }}>
+                        <div style={{ display: 'flex' }}>
+                            <h1 style={{ fontSize: '10em', margin: 0 }} >{this.props.projects[this.state.projectIndex].title}</h1>
                         </div>
-                    )}
+                        <div>
+                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <h1 style={{ width:'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >Project Description: </h1>
+                                <p>A redesigned interactive front-end experience inspired by the childhood game M.A.S.H. </p>
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <h1 style={{ width:'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >My Role: </h1>
+                                <p>Development + Design</p>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         );
     }
@@ -108,3 +132,21 @@ class Projects extends Component {
 
 
 export default Projects;
+
+
+                    // this.state.projects.map((project) =>
+                    //     <div style={{ display: 'flex', flexFlow: 'wrap', width: '50%' }}>
+                    //         <Row>
+                    //             <Card                                    
+                    //                 style={{backgroundColor: project.backgroundColor}}>
+                    //                 <div className="outline ">
+                    //                     <h1
+                    //                      onMouseEnter={this.trackHoverIn.bind(this, project)} 
+                    //                      onMouseOut={this.trackHoverOut.bind(this)} 
+                    //                     key={project.id}>
+                    //                         {project.title}
+                    //                     </h1>
+                    //                 </div>
+                    //             </Card>
+                    //         </Row>
+                    //     </div>

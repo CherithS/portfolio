@@ -74,7 +74,7 @@ class App extends Component {
             <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '25%' }}>
               <Container style={{ width: '40vw' }}>
                 <div>
-                  <div><h1 style={{ fontSize: '1.5em' }}>Hello, my name is</h1></div>
+                  <div><h1 style={{ fontSize: '1.5em', borderBottom: '10px solid #FFE600', paddingBottom: '10px', width: 'fit-content' }}>Hello, my name is</h1></div>
                   <div>
                     <h1 style={{ fontSize: '5em', color: '#2E23C8', margin: 0 }}>
                       CHERITH <br /> SIMM<span>
@@ -88,7 +88,9 @@ class App extends Component {
                 <h1> + </h1>
               </Container>
               <Container style={{ width: '25vw' }}>
-                <h1>I'm a front end developer</h1>
+                <h1>I'm a 
+                <span style={{ borderBottom: '30px solid #FFE600', paddingBottom: '-50px' }}> front end developer</span>
+                </h1>
               </Container>
             </div>
           </div>
@@ -96,7 +98,7 @@ class App extends Component {
         </Intro>
 
         <div style={{ display: 'flex', height: '95vh', flexDirection: 'row', justifyContent: 'space-evenly' }}>
-        
+        <Background style={{position: 'absolute', backgroundColor: 'red'}} />
           <Profile />
           <ProjectSection>
             <Projects projects={projects} />

@@ -14,7 +14,7 @@ const Box = styled.div`
 
 const ExperienceContainer = styled.div`
     height: 88vh;
-    width: 15vw;
+    width: 20vw;
     position: relative;
     border: none;
     /* margin-right: 3%; */

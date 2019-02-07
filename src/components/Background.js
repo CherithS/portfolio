@@ -13,10 +13,12 @@ const Vectors = styled.img`
 `;
 
 class Background extends Component {
+    constructor(props){
+        super(props);
+    }
     render() {
         return (
-            // border: 'solid pink',
-            <div style={{ display:'flex', flexDirection: 'row', flexFlow:'wrap', position:'relative', width: '97vw', justifyContent: 'space-between'}}>
+            <div style={{ display:'flex', flexDirection: 'row', flexFlow:'wrap', width: '97vw', justifyContent: 'space-between', position: 'absolute' }}>
                 <div style={{ display:'flex', flexDirection:'column', width: '33%', height: '100%', justifyContent:'space-between'  }}>                   
                     <img className="floating-vector" src={topLeft} style={{ width:'50%' }}/>
                     <img className="floating-vector" src={bottomLeft} style={{ }}/>                         
