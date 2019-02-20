@@ -3,6 +3,13 @@
   src: url(/assets/Social-Media-Circled.woff) ;
 }
 
+@font-face {
+  font-family: CoolveticaFont;
+  //src: url(./assets/coolvetica.ttf);
+  src: url(./assets/coolvetica.woff);
+
+}
+
 .social-media {
   font-family: socialMediaIcons;
 }
@@ -29,7 +36,8 @@
 h1 {
   //color: rgb(52, 52, 53);
   color: #2E23C8;
-  font-family: Coolvetica;
+  font-family: CoolveticaFont;
+  font-weight: 500;
 }
 
 p {

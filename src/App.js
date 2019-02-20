@@ -42,10 +42,29 @@ const Container = styled.div`
 const greetings = ['Hola', 'Bonjour', 'Oh hai', 'Hello'];
 
 const projects = [
-  { id: 1, title: 'M.A.S.H.', content: '', hover: false, backgroundColor: 'rgb(254, 239, 240)' },
-  { id: 2, title: 'SLO', content: '', hover: false, backgroundColor: 'rgb(254, 239, 240)' },
-  { id: 3, title: 'FaceSpace', content: '', hover: false, backgroundColor: 'rgb(254, 239, 240)' },
-  { id: 4, title: 'this.website', content: '', hover: false, backgroundColor: 'rgb(254, 239, 240)' }
+  { id: 1, 
+    title: 'M.A.S.H.', 
+    description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.', 
+    role: 'Development + Design'
+  },
+  { 
+    id: 2, 
+    title: 'SLO', 
+    description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.', 
+    role: 'Development + Design'
+  },
+  { 
+    id: 3, 
+    title: 'FaceSpace', 
+    description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.', 
+    role: 'Development + Design'
+  },
+  { 
+    id: 4, 
+    title: 'this.website', 
+    description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.', 
+    role: 'Development + Design'
+  }
 ];
 
 class App extends Component {

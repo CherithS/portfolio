@@ -85,7 +85,7 @@ class Profile extends Component {
             <div style={{ }}>
                 <Section>
                     <SectionOutline>
-                        <img alt="" style={{ borderRadius: '50%', width: 'inherit', border: '6px solid #ffc9cd' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
+                        <img alt="" style={{ borderRadius: '50%', width: 'inherit', border: '6px solid white' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
 
                         <MiddleProfile>
                             <Box style={{flexDirection: 'column', width: '7vw', lineHeight:'.3'}}>

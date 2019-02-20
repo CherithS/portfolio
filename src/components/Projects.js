@@ -43,7 +43,7 @@ var backgroundColor = '';
 
 var projectIndex = 1;
 var selected = projects[0];
-//var projects = this.props.projects;
+var projects = [];
 
 class Projects extends Component {
     constructor(props) {
@@ -55,9 +55,10 @@ class Projects extends Component {
             selectedProject: projects[0]
         }
 
-        // this.props.projects.map((project) => {
-        //     projects.push(project);
-        // });
+        this.props.projects.map((project) => {
+            projects.push(project);
+        });
+
         this.nextProject = this.nextProject
     }
 
@@ -97,33 +98,34 @@ class Projects extends Component {
         });
     }
 
-    // border-bottom: 10px solid #fddd2c;
-    // padding-bottom: 15px;
-
     render() {
+        console.log('projects: ' + projects);
+        console.log('projects.length: ' + projects.length);
 
         return (
-            <div style={{ display: 'flex', flexFlow: 'wrap', flexDirection: 'row' }}>
-                {/* <div style={{ height: 50, width: 100 }}>
-                    <button style={{ height: 50, width: 100 }} onClick={this.nextProject} >Next</button>
-                </div> */}
-                {
+            <div style={{ display: 'flex', flexFlow: 'wrap', flexDirection: 'column' }}>
+               
+                <div style={{ display: 'flex'}}>
                     <div style={{ position: 'absolute' }}>
                         <div style={{ display: 'flex' }}>
                             <h1 style={{ fontSize: '10em', margin: 0 }} >{this.props.projects[this.state.projectIndex].title}</h1>
                         </div>
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                <h1 style={{ width:'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >Project Description: </h1>
-                                <p>A redesigned interactive front-end experience inspired by the childhood game M.A.S.H. </p>
+                                <h1 style={{ width: 'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >Project Description: </h1>
+                                <p>{this.props.projects[this.state.projectIndex].description}</p>
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                <h1 style={{ width:'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >My Role: </h1>
-                                <p>Development + Design</p>
+                                <h1 style={{ width: 'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >My Role: </h1>
+                                <p>{this.props.projects[this.state.projectIndex].role}</p>
                             </div>
                         </div>
                     </div>
-                }
+                </div>
+                {/* <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '20vw' }}>
+                    <button>Previous</button>
+                    <button>Next</button>
+                </div>              */}
             </div>
         );
     }
