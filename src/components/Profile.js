@@ -15,8 +15,8 @@ const Box = styled.div`
     background-color: white;
     border: 1px solid pink;
     box-shadow: 10px 15px #f3f3f3;
-    padding: 15px;
-    max-height: 5vh;
+    padding: 10px;
+    /* max-height: 5vh; */
 `;
 
 const NameBox = styled.div`
@@ -93,11 +93,11 @@ class Profile extends Component {
                                 <h2 style={{ fontSize: '.8em' }} >Front End Developer</h2>
                             </Box>
                             <Box>
-                                <p style={{ fontSize: '8px', textAlign: 'left' }}><span style={{ fontWeight: 800 }}>Likes:</span> Challenging convos, sushi, Netflix, learning, ethically-made clothing</p>
+                                <p style={{ fontSize: '1em', textAlign: 'left' }}><span style={{ fontWeight: 800 }}>Likes:</span> Challenging convos, sushi, Netflix, learning, ethically-made clothing</p>
                             </Box>
 
                             <Box>
-                                <p style={{ fontSize: '8px', textAlign: 'left' }}><span style={{ fontWeight: 800 }}>Dislikes:</span> Negativity, stereotypnpm starting, puppy mills, slow internet, employees-only restrooms, long lines</p>
+                                <p style={{ fontSize: '1em', textAlign: 'left' }}><span style={{ fontWeight: 800 }}>Dislikes:</span> Negativity, stereotypnpm starting, puppy mills, slow internet, employees-only restrooms, long lines</p>
                             </Box>
                             <div className='card' style={{ display:'flex', width: 'inherit', height: '5vh', backgroundColor: 'white', border: '5px solid #FFE600', justifyContent: 'center', flexDirection: 'center', alignItems: 'center', cursor: 'pointer' }}>
                                 <h4 style={{ color: 'mediumblue' }} >MESSAGE</h4>
