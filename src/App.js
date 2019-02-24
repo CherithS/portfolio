@@ -88,7 +88,7 @@ class App extends Component {
     return (
       <div className="App">
         <Intro>
-          <div style={{ backgroundColor: 'transparent', height: '100vh',  justifyContent: 'center', display: 'flex' }}>
+          <div style={{ backgroundColor: 'transparent', height: '100vh',  justifyContent: 'center', position: 'relative' }}>
           <Background />
             
             <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '25%' }}>
@@ -118,7 +118,7 @@ class App extends Component {
         </Intro>
 
         <div style={{ display: 'flex', height: '95vh', flexDirection: 'row', justifyContent: 'space-evenly' }}>
-        {/* <Background /> */}
+        <Background />
           <Profile />
           <ProjectSection>
             <Projects projects={projects} />
