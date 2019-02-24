@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Background from './components/Background'
 
 
+
 const Box = styled.div`
     font-size: 12px;
     text-align: left;
@@ -87,9 +88,9 @@ class App extends Component {
     return (
       <div className="App">
         <Intro>
-          <div style={{ backgroundColor: 'transparent', height: '97vh', margin: '0px 10px 0px 10px', justifyContent: 'center', display: 'flex' }}>
-
-            <Background> </Background>
+          <div style={{ backgroundColor: 'transparent', height: '100vh',  justifyContent: 'center', display: 'flex' }}>
+          <Background />
+            
             <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '25%' }}>
               <Container style={{ width: '40vw' }}>
                 <div>
@@ -117,7 +118,7 @@ class App extends Component {
         </Intro>
 
         <div style={{ display: 'flex', height: '95vh', flexDirection: 'row', justifyContent: 'space-evenly' }}>
-        <Background style={{position: 'absolute', backgroundColor: 'red'}} />
+        {/* <Background /> */}
           <Profile />
           <ProjectSection>
             <Projects projects={projects} />
