@@ -91,7 +91,7 @@ class App extends Component {
           <div style={{ backgroundColor: 'transparent', height: '100vh',  justifyContent: 'center', position: 'relative' }}>
           <Background />
             
-            <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '25%' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', height: '100%', width: '100%' }}>
               <Container style={{ width: '40vw' }}>
                 <div>
                   <div><h1 style={{ fontSize: '1.5em', borderBottom: '10px solid #FFE600', paddingBottom: '10px', width: 'fit-content' }}>Hello, my name is</h1></div>
