@@ -117,7 +117,7 @@ class App extends Component {
 
         </Intro>
 
-        <div style={{ display: 'flex', height: '95vh', flexDirection: 'row', justifyContent: 'space-evenly' }}>
+        <div style={{ display: 'flex', height: '97vh', flexDirection: 'row', justifyContent: 'space-evenly' }}>
         <Background style={{ paddingTop: 0 }} />
           <Profile />
           <ProjectSection>
