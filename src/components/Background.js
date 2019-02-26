@@ -14,10 +14,19 @@ const Background = () => {
     }
    
     return (
-      <div style={{display: 'flex', position: 'absolute',height: '100%', width:'100%', alignItems: 'center'}}>
+      <div style={{display: 'flex', position: 'absolute', height: '90%', paddingTop:'10px', width:'100%', marginTop:'4vh', alignItems: 'center', overflow:'hidden'}}>
         <ReactBodymovin options={bodymovinOptions} />
       </div>
     )
   }
    
   export default Background;
+
+//   display: flex;
+//   position: absolute;
+//   height: 90%;
+//   padding-top: 10px;
+//   width: 100%;
+//   align-items: center;
+//   overflow: hidden;
+//   margin-top: 2vh;
