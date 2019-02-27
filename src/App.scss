@@ -5,7 +5,6 @@
 
 @font-face {
   font-family: CoolveticaFont;
-  //src: url(./assets/coolvetica.ttf);
   src: url(./assets/coolvetica.woff);
 
 }
@@ -22,7 +21,6 @@
 }
 
 .App-header {
-  /* background-color:#FFC300; */
   background-color: #FBF8F8;
   max-height: 100vh;
   max-width: 100vw;
@@ -35,7 +33,6 @@
 }
 
 h1 {
-  //color: rgb(52, 52, 53);
   color: #2E23C8;
   font-family: CoolveticaFont;
   font-weight: 500;
@@ -86,8 +83,6 @@ p {
 
   .skills {
      height: 6vh;
-     //width: 15vw;
-    // border: 1px solid mediumblue;
      display: flex;
      flex-direction: row; 
      margin: 5; 
@@ -115,11 +110,6 @@ p {
     text-decoration-color: mediumaquamarine;
     font-weight: 500;
   }
-
-  h2:hover{
-    // font-weight: 800;
-    // cursor: pointer;
-  }
 }
 
 
@@ -129,23 +119,6 @@ p {
   color: whitesmoke;
   font-size: 100px;
 }
-
-// .card:hover {
-//   animation-name: grow;
-//   animation-duration: .5s;
-//   height: 100vh;
-// }
-
-// .title {
-//   color: mediumblue;
-//   font-size: 10rem;
-//   text-align: left;
-// }
-
-// .title span {
-//   font-size: 7rem;
-// }
-
 
 
 .menu {
@@ -160,6 +133,16 @@ p {
   height: 100vh;
 }
 
+button {
+  display: flex;
+  width: inherit;
+  height: 5vh;
+  background-color: white;
+  border: 5px solid rgb(255, 230, 0);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
 
 .button-projects {
@@ -174,7 +157,6 @@ p {
    background-color: #FFA07A;
   animation-name: grow;
   animation-duration: .5s;
-  //font-size: 50px;
 }
 
 

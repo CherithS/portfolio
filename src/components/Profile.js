@@ -99,7 +99,7 @@ class Profile extends Component {
                             <Box>
                                 <p style={{ fontSize: '1em', textAlign: 'left' }}><span style={{ fontWeight: 800 }}>Dislikes:</span> Negativity, stereotypnpm starting, puppy mills, slow internet, employees-only restrooms, long lines</p>
                             </Box>
-                            <div className='card' style={{ display:'flex', width: 'inherit', height: '5vh', backgroundColor: 'white', border: '5px solid #FFE600', justifyContent: 'center', flexDirection: 'center', alignItems: 'center', cursor: 'pointer' }}>
+                            <div  style={{ display:'flex', width: 'inherit', height: '5vh', backgroundColor: 'white', border: '5px solid #FFE600', justifyContent: 'center', flexDirection: 'center', alignItems: 'center', cursor: 'pointer' }}>
                                 <h4 style={{ color: 'mediumblue' }} >MESSAGE</h4>
                             </div>
                         </MiddleProfile>

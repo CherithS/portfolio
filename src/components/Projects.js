@@ -63,40 +63,18 @@ class Projects extends Component {
     }
 
 
-    nextProject(){
-        console.log('nextProject!');
-
-        console.log(this.state.projectIndex);
-
-        // this.setState({
-        //     projectIndex: 1
-        // });
-    }
-
-    trackHoverIn(project) {
-        var index = this.props.projects.indexOf(project);
-
-        projects[index].backgroundColor = 'rgb(254, 239, 240)';
-
-        projects.forEach(p => {
-            if (p.id != project.id) {
-                p.backgroundColor = 'white';
-            }
-        });
+    prevProject = () => {
         this.setState({
-            project: projects
+            projectIndex: this.state.projectIndex - 1
         });
     }
 
-    trackHoverOut() {
-        projects.forEach(p => {
-            p.backgroundColor = 'rgb(254, 239, 240)';
-        });
-
+    nextProject = () => {
         this.setState({
-            project: projects
+            projectIndex: this.state.projectIndex + 1
         });
     }
+
 
     render() {
         console.log('projects: ' + projects);
@@ -104,10 +82,10 @@ class Projects extends Component {
 
         return (
             <div style={{ display: 'flex', flexFlow: 'wrap', flexDirection: 'column' }}>
-               
-                <div style={{ display: 'flex'}}>
+                <div style={{ display: 'flex' }}>
                     <div style={{ position: 'absolute' }}>
-                        <div style={{ display: 'flex' }}>
+
+                    <div style={{ display: 'flex' }}>
                             <h1 style={{ fontSize: '10em', margin: 0 }} >{this.props.projects[this.state.projectIndex].title}</h1>
                         </div>
                         <div>
@@ -120,12 +98,38 @@ class Projects extends Component {
                                 <p>{this.props.projects[this.state.projectIndex].role}</p>
                             </div>
                         </div>
+
+                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: '100%' }}>
+                            <button onClick={ this.prevProject } style={{border:0, backgroundColor: 'transparent', cursor: 'pointer' }}>Previous</button>
+                            <button onClick={ this.nextProject } style={{border:0, backgroundColor: 'transparent', cursor: 'pointer' }}>Next</button>
+                        </div>
+
+
+                        {/* {
+
+                            this.state.projects.map((project, key) =>
+                                <div>
+                                    <div style={{ display: 'flex' }}>
+                                        <h1 style={{ fontSize: '10em', margin: 0 }} key={ project.id }>{ project.title }</h1>
+                                    </div>
+                                    <div>
+                                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                            <h1 style={{ width: 'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >Project Description: </h1>
+                                            <p key={ project.id } >{ project.description }</p>
+                                        </div>
+                                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                            <h1 style={{ width: 'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >My Role: </h1>
+                                            <p key={ project.id } >{ project.role }</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        } */}
+
+
+                    
                     </div>
                 </div>
-                {/* <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '20vw' }}>
-                    <button>Previous</button>
-                    <button>Next</button>
-                </div>              */}
             </div>
         );
     }
@@ -135,20 +139,3 @@ class Projects extends Component {
 
 export default Projects;
 
-
-                    // this.state.projects.map((project) =>
-                    //     <div style={{ display: 'flex', flexFlow: 'wrap', width: '50%' }}>
-                    //         <Row>
-                    //             <Card                                    
-                    //                 style={{backgroundColor: project.backgroundColor}}>
-                    //                 <div className="outline ">
-                    //                     <h1
-                    //                      onMouseEnter={this.trackHoverIn.bind(this, project)} 
-                    //                      onMouseOut={this.trackHoverOut.bind(this)} 
-                    //                     key={project.id}>
-                    //                         {project.title}
-                    //                     </h1>
-                    //                 </div>
-                    //             </Card>
-                    //         </Row>
-                    //     </div>
