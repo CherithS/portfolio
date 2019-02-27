@@ -100,8 +100,8 @@ class Projects extends Component {
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: '100%' }}>
-                            <button onClick={ this.prevProject } style={{border:0, backgroundColor: 'transparent', cursor: 'pointer' }}>Previous</button>
-                            <button onClick={ this.nextProject } style={{border:0, backgroundColor: 'transparent', cursor: 'pointer' }}>Next</button>
+                            <button onClick={ this.prevProject } style={{ margin: '10px' }}>Previous</button>
+                            <button onClick={ this.nextProject }  style={{ margin: '10px' }}>Next</button>
                         </div>
 
 
