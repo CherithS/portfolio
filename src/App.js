@@ -57,7 +57,7 @@ const projects = [
   { 
     id: 2, 
     title: 'this.website', 
-    description: 'My personal portfolio showcasing my work.', 
+    description: 'My personal portfolio showcasing my', 
     role: 'Development + Design'
   }
 ];
@@ -83,7 +83,7 @@ class App extends Component {
       <div className="App">
         <Intro>
           <div style={{ backgroundColor: 'transparent', height: '100vh',  justifyContent: 'center', position: 'relative' }}>
-          <Background />
+          <Background style={{ width: '100%' }} />
             
             <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', height: '100%', width: '100%' }}>
               <Container style={{ width: '40vw' }}>
