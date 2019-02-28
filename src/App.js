@@ -22,7 +22,7 @@ const ProjectSection = styled.div`
   display: flex;
   height: 88vh;
   width: 55vw;
-  flex-flow: wrap;
+  /* flex-flow: wrap; */
 `;
 
 const Intro = styled.div`
@@ -57,7 +57,7 @@ const projects = [
   { 
     id: 2, 
     title: 'this.website', 
-    description: '', 
+    description: 'My personal portfolio showcasing my work.', 
     role: 'Development + Design'
   }
 ];
