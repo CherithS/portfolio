@@ -100,8 +100,13 @@ class Projects extends Component {
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: '100%' }}>
-                        <button onClick={this.prevProject} style={{ margin: '10px' }}>Previous</button>
-                        <button onClick={this.nextProject} style={{ margin: '10px' }}>Next</button>
+                        <button className='styled-button' ><h1 style={{ margin: 0, fontSize: 15 }} >Project</h1></button>
+                        <button className='styled-button' ><h1 style={{ margin: 0, fontSize: 15 }} >Process</h1></button>
+                    </div>
+                    
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%' }}>
+                        <button onClick={this.prevProject} style={{ border: 0, backgroundColor: 'transparent', cursor: 'pointer' }}> Prev</button>
+                        <button onClick={this.nextProject} style={{ border: 0, backgroundColor: 'transparent', cursor: 'pointer' }}> Next</button>
                     </div>
 
             </div>
