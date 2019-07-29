@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import background  from '../assets/animation-data/one.json';
 import ReactBodymovin from 'react-bodymovin';

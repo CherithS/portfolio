@@ -9,7 +9,6 @@
 
 }
 
-
 .social-media {
   font-family: socialMediaIcons;
 }
@@ -81,6 +80,14 @@ p {
     color: 'white';
   }
 
+  .industries {
+    height: 4vh;
+    display: flex;
+    flex-direction: row; 
+    font-size: 50%;
+    color: mediumblue;
+  }
+
   .skills {
      height: 6vh;
      display: flex;
@@ -109,6 +116,8 @@ p {
     text-decoration: underline;
     text-decoration-color: mediumaquamarine;
     font-weight: 500;
+    margin: 0;
+    padding: 0;
   }
 }
 

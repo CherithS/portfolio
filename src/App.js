@@ -9,20 +9,27 @@ import Background from './components/Background'
 
 
 
-const Box = styled.div`
-    font-size: 12px;
-    text-align: left;
-    background-color: white;
-    border: 1px solid pink;
-    box-shadow: 10px 15px pink;
-    padding: 15px;
-`;
+// const Box = styled.div`
+//     font-size: 12px;
+//     text-align: left;
+//     background-color: white;
+//     border: 1px solid pink;
+//     box-shadow: 10px 15px pink;
+//     padding: 15px;
+// `;
 
 const ProjectSection = styled.div`
   display: flex;
+  flex-direction: column;
   height: 88vh;
   width: 55vw;
-  /* flex-flow: wrap; */
+
+  button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    
+  }
 `;
 
 const Intro = styled.div`
@@ -46,34 +53,57 @@ const projects = [
   { id: 0, 
     title: 'M.A.S.H.', 
     description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.', 
-    role: 'Development + Design'
+    role: 'Development + Design',
+    technologies: ['Angular 4+', 'SASS', 'Flexbox', 'Responsive Design', 'NPM']
   },
   { 
     id: 1, 
     title: 'FaceSpace', 
     description: 'Who\'s in your top eight?', 
-    role: 'Development + Design'
+    role: 'Development + Design',
+    technologies: ['']
   },
   { 
     id: 2, 
     title: 'this.website', 
     description: 'My personal portfolio showcasing my', 
-    role: 'Development + Design'
+    role: 'Development + Design',
+    technologies: ['']
   }
 ];
+
+
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      showProjectsDropdown: false,
-      showExperienceDropdown: false
+      projectIndex: 0
     };
-
   }
 
   playGreetings() {
     greetings.map(g => console.log(g));
+  }
+
+  
+  prevProject = () => {
+    console.log('prev');
+      if (this.state.projectIndex === 0) { this.setState({ projectIndex: 0 }); console.log('if'); }
+      else {
+          this.setState({
+              projectIndex: this.state.projectIndex - 1
+          })
+      }
+  }
+
+  nextProject = () => {
+    console.log('next');
+      if (this.state.projectIndex === this.props.projects.length - 1) { this.setState({ projectIndex: this.props.projects.length - 1 }); console.log('if'); }
+      else {
+          this.setState({ projectIndex: this.state.projectIndex + 1 })
+      }
   }
 
 
@@ -111,13 +141,17 @@ class App extends Component {
 
         </Intro>
 
-        <div style={{ display: 'flex', height: '97vh', flexDirection: 'row', justifyContent: 'space-evenly' }}>
+        <div style={{ display: 'flex', height: '90vh', flexDirection: 'row', justifyContent: 'space-evenly' }}>
         <Background style={{ paddingTop: 0 }} />
           <Profile />
           <ProjectSection>
-            <Projects projects={projects} />
+            <Projects projects={projects} projectIndex={ this.state.projectIndex } />
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%' }}>
+              <button onClick={this.prevProject}> Prev</button>
+              <button onClick={this.nextProject}> Next</button>
+            </div>
           </ProjectSection>
-          <Experience />
+          <Experience project={ projects[this.state.projectIndex] } />
         </div>
       </div>
     );

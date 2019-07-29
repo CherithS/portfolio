@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import instagram from '../../src/instagram.svg';
-import linkedin from '../../src/linkedin.svg';
-import github from '../../src/github.svg';
+// import instagram from '../../src/instagram.svg';
+// import linkedin from '../../src/linkedin.svg';
+// import github from '../../src/github.svg';
 
 
 
@@ -19,26 +19,26 @@ const Box = styled.div`
     /* max-height: 5vh; */
 `;
 
-const NameBox = styled.div`
-    width: inherit;
-    line-height: 1;
-    text-align: center;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 6%;
-    margin-left: -40px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: .5px solid mediumaquamarine;
-    padding-left: 20px;
-    background-color: white;
-    padding-right: 20px;
-`;
+// const NameBox = styled.div`
+//     width: inherit;
+//     line-height: 1;
+//     text-align: center;
+//     -webkit-flex-direction: column;
+//     -ms-flex-direction: column;
+//     flex-direction: column;
+//     display: -webkit-box;
+//     display: -webkit-flex;
+//     display: -ms-flexbox;
+//     display: flex;
+//     margin-bottom: 6%;
+//     margin-left: -40px;
+//     padding-top: 5px;
+//     padding-bottom: 5px;
+//     border: .5px solid mediumaquamarine;
+//     padding-left: 20px;
+//     background-color: white;
+//     padding-right: 20px;
+// `;
 
 const Section = styled.div`
     display: flex;
@@ -73,11 +73,11 @@ const MiddleProfile = styled.div`
     text-align: center; */
 `;
 
-const BottomProfile = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
+// const BottomProfile = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// `;
 
 class Profile extends Component {
     render() {
