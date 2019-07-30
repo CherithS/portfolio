@@ -56,20 +56,21 @@ const projects = [
     role: 'Development + Design',
     technologies: ['Angular 4+', 'SASS', 'Flexbox', 'Responsive Design', 'NPM']
   },
-  { 
+  {
     id: 1, 
-    title: 'FaceSpace', 
-    description: 'Who\'s in your top eight?', 
-    role: 'Development + Design',
-    technologies: ['']
+    title: 'US Bank', 
+    description: 'Splash page advertising the new iOS app for U.S. Bank', 
+    role: 'Development',
+    technologies: ['React', 'ES6', 'GIT','a11y', 'Rapid Prototyping', 'Sketch', 'Cross Device Development', 'Webpack', 'SPA', 'Responsive Design']
   },
   { 
     id: 2, 
     title: 'this.website', 
     description: 'My personal portfolio showcasing my', 
     role: 'Development + Design',
-    technologies: ['']
-  }
+    technologies: ['React', 'Adobe XD', 'After Effects', 'UX Design', 'Wireframing', 'NPM']
+  },
+  
 ];
 
 
@@ -92,7 +93,7 @@ class App extends Component {
       projectIndex: this.state.projectIndex - 1
   })
   
-      if (this.state.projectIndex === 0) { this.setState({ projectIndex: 0 }); console.log('if'); }
+      if (this.state.projectIndex === 0) { this.setState({ projectIndex: projects.length-1 }); console.log('if'); }
       else {
           this.setState({
               projectIndex: this.state.projectIndex - 1
@@ -104,7 +105,7 @@ class App extends Component {
     this.setState({ projectIndex: this.state.projectIndex + 1 })
     console.log('next');
     console.log(projects);
-      if (this.state.projectIndex === projects.length - 1) { this.setState({ projectIndex: projects.length - 1 }); console.log('if'); }
+      if (this.state.projectIndex === projects.length - 1) { this.setState({ projectIndex: 0 }); console.log('if'); }
       else {
           this.setState({ projectIndex: this.state.projectIndex + 1 })
       }
