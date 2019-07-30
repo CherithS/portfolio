@@ -73,10 +73,6 @@ const projects = [
 ];
 
 
-function hello(){
-  console.log('hello');
-}
-
 class App extends Component {
   constructor() {
     super();
@@ -107,7 +103,8 @@ class App extends Component {
   nextProject = () => {
     this.setState({ projectIndex: this.state.projectIndex + 1 })
     console.log('next');
-      if (this.state.projectIndex === this.props.projects.length - 1) { this.setState({ projectIndex: this.props.projects.length - 1 }); console.log('if'); }
+    console.log(projects);
+      if (this.state.projectIndex === projects.length - 1) { this.setState({ projectIndex: projects.length - 1 }); console.log('if'); }
       else {
           this.setState({ projectIndex: this.state.projectIndex + 1 })
       }
