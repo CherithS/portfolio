@@ -49,7 +49,7 @@ function Skills(props) {
             else { isUsed = false }
 
             return (
-                <div>
+                <div key={idx}>
                     <li key={idx} style={{ marginTop: 4, padding: 3, border: isUsed ? 'solid 3px blue' : 'none' }} >{s}</li>
                 </div>
             )

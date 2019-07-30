@@ -55,7 +55,7 @@ class Projects extends Component {
             projects.push(project);
         });
 
-        this.nextProject = this.nextProject
+        // this.nextProject = this.nextProject
 
     }
 

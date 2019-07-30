@@ -6,6 +6,7 @@ import Profile from './components/Profile';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Background from './components/Background'
+import { relative } from 'path';
 
 
 
@@ -24,12 +25,11 @@ const ProjectSection = styled.div`
   height: 88vh;
   width: 55vw;
 
-  button {
+  /* button {
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    
-  }
+  } */
 `;
 
 const Intro = styled.div`
@@ -73,7 +73,9 @@ const projects = [
 ];
 
 
-
+function hello(){
+  console.log('hello');
+}
 
 class App extends Component {
   constructor() {
@@ -90,6 +92,10 @@ class App extends Component {
   
   prevProject = () => {
     console.log('prev');
+    this.setState({
+      projectIndex: this.state.projectIndex - 1
+  })
+  
       if (this.state.projectIndex === 0) { this.setState({ projectIndex: 0 }); console.log('if'); }
       else {
           this.setState({
@@ -99,6 +105,7 @@ class App extends Component {
   }
 
   nextProject = () => {
+    this.setState({ projectIndex: this.state.projectIndex + 1 })
     console.log('next');
       if (this.state.projectIndex === this.props.projects.length - 1) { this.setState({ projectIndex: this.props.projects.length - 1 }); console.log('if'); }
       else {
@@ -138,7 +145,6 @@ class App extends Component {
               </Container>
             </div>
           </div>
-
         </Intro>
 
         <div style={{ display: 'flex', height: '90vh', flexDirection: 'row', justifyContent: 'space-evenly' }}>
@@ -146,9 +152,9 @@ class App extends Component {
           <Profile />
           <ProjectSection>
             <Projects projects={projects} projectIndex={ this.state.projectIndex } />
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%' }}>
-              <button onClick={this.prevProject}> Prev</button>
-              <button onClick={this.nextProject}> Next</button>
+            <div  style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%' }}>
+              <button style={{ position: relative, zIndex: 1 }} type="button" onClick={this.prevProject}> Prev</button>
+              <button style={{ position: relative, zIndex: 1 }} type="button" onClick={this.nextProject}> Next</button>
             </div>
           </ProjectSection>
           <Experience project={ projects[this.state.projectIndex] } />
