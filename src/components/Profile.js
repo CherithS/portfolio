@@ -99,8 +99,9 @@ class Profile extends Component {
                             <Box>
                                 <p style={{ fontSize: '1em', textAlign: 'left' }}><span style={{ fontWeight: 800 }}>Dislikes:</span> Negativity, stereotypnpm starting, puppy mills, slow internet, employees-only restrooms, long lines</p>
                             </Box>
-                            <div  style={{ display:'flex', width: 'inherit', height: '5vh', backgroundColor: 'white', border: '5px solid #FFE600', justifyContent: 'center', flexDirection: 'center', alignItems: 'center', cursor: 'pointer' }}>
-                                <h4 style={{ color: 'mediumblue' }} >MESSAGE</h4>
+                            {/* style={{ display:'flex', width: 'inherit', height: '5vh', backgroundColor: 'white', border: '5px solid #FFE600', justifyContent: 'center', flexDirection: 'center', alignItems: 'center', cursor: 'pointer' }} */}
+                            <div className="styled-button" >
+                               <h4><a href="mailto:cherithsimmons@gmail.com" target="_top">MESSAGE</a></h4>
                             </div>
                         </MiddleProfile>
                         {/* <BottomProfile>

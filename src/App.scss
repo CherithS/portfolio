@@ -151,14 +151,20 @@ p {
   // width: inherit;
   height: 5vh;
   background-color: white;
+  color: #2E23C8;
   border: 5px solid rgb(255, 230, 0);
   justify-content: center;
   align-items: center;
   cursor: pointer;
   margin: 10px;
 
+  a {
+    text-decoration: none;
+  }
+
   &:hover {
     background-color: rgb(255, 230, 0);
+    color: #2E23C8;
     transition: background-color .5s;
   }
 }

@@ -64,7 +64,7 @@ const projects = [
   },
   {
     id: 1, 
-    title: 'US Bank', 
+    title: 'U.S. Bank', 
     description: 'Splash page advertising the new iOS app for U.S. Bank', 
     role: 'Development',
     technologies: ['React', 'ES6', 'GIT','a11y', 'Rapid Prototyping', 'Sketch', 'Cross Device Development', 'Webpack', 'SPA', 'Responsive Design']
