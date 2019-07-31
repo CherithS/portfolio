@@ -162,6 +162,9 @@ p {
     text-decoration: none;
   }
 
+  :active {
+    color: #2E23C8;
+  }
   &:hover {
     background-color: rgb(255, 230, 0);
     color: #2E23C8;
