@@ -50,7 +50,7 @@ const MainPage = styled.div`
     display: flex;
     height: 100vh;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
 
     justify-content: center;
     align-items: center;
@@ -167,8 +167,7 @@ class App extends Component {
         <MainPage>
         <Background style={{ paddingTop: 0 }} />
         <Projects projects={projects} projectIndex={this.state.projectIndex} />
-
-
+        <Experience project={ projects[this.state.projectIndex] } />
           {/* <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', height: '100%', width: '100%' }}>
             <Background style={{ paddingTop: 0 }} />
             <Profile />

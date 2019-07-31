@@ -62,7 +62,7 @@ class Projects extends Component {
     render() {
 
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', width: '50%', justifyContent: 'space-evenly' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', width: '50%   ', justifyContent: 'space-evenly' }}>
 
                 <div style={{ display: 'flex' }}>
                     <h1 style={{ fontSize: '10em', margin: 0 }} >{this.props.projects[this.props.projectIndex].title}</h1>
