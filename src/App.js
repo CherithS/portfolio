@@ -22,7 +22,7 @@ import { relative } from 'path';
 const ProjectSection = styled.div`
   display: flex;
   flex-direction: column;
-  height: 88vh;
+  height: 80%;
   width: 55vw;
 
   .project-nav-button {
@@ -46,6 +46,16 @@ const Intro = styled.div`
     justify-content: center;
 `;
 
+const MainPage = styled.div`
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+`;
+
 const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -57,24 +67,25 @@ const greetings = ['Hola', 'Bonjour', 'Oh hai', 'Hello'];
 
 const projects = [
   {
-    id: 0, 
-    title: 'U.S. Bank', 
-    description: 'Splash page advertising the new iOS app for U.S. Bank', 
+    id: 0,
+    title: 'U.S. Bank',
+    description: 'Splash page advertising the new iOS app for U.S. Bank',
     role: 'Development',
-    technologies: ['React', 'ES6', 'GIT','a11y', 'Rapid Prototyping', 'Sketch', 'Cross Device Development', 'Webpack', 'SPA', 'Responsive Design'],
+    technologies: ['React', 'ES6', 'GIT', 'a11y', 'Rapid Prototyping', 'Sketch', 'Cross Device Development', 'Webpack', 'SPA', 'Responsive Design'],
     comingSoon: false
   },
-  { 
-    id: 1, 
-    title: 'this.website', 
-    description: 'My personal portfolio showcasing my', 
+  {
+    id: 1,
+    title: 'this.website',
+    description: 'My personal portfolio showcasing my',
     role: 'Development + Design',
     technologies: ['React', 'Adobe XD', 'After Effects', 'UX Design', 'Wireframing', 'NPM'],
     comingSoon: false
   },
-  { id: 2, 
-    title: 'M.A.S.H.', 
-    description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.', 
+  {
+    id: 2,
+    title: 'M.A.S.H.',
+    description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.',
     role: 'Development + Design',
     technologies: ['Angular 4+', 'SASS', 'Flexbox', 'Responsive Design', 'NPM'],
     comingSoon: true
@@ -94,29 +105,29 @@ class App extends Component {
     greetings.map(g => console.log(g));
   }
 
-  
+
   prevProject = () => {
     console.log('prev');
     this.setState({
       projectIndex: this.state.projectIndex - 1
-  })
-  
-      if (this.state.projectIndex === 0) { this.setState({ projectIndex: projects.length-1 }); console.log('if'); }
-      else {
-          this.setState({
-              projectIndex: this.state.projectIndex - 1
-          })
-      }
+    })
+
+    if (this.state.projectIndex === 0) { this.setState({ projectIndex: projects.length - 1 }); console.log('if'); }
+    else {
+      this.setState({
+        projectIndex: this.state.projectIndex - 1
+      })
+    }
   }
 
   nextProject = () => {
     this.setState({ projectIndex: this.state.projectIndex + 1 })
     console.log('next');
     console.log(projects);
-      if (this.state.projectIndex === projects.length - 1) { this.setState({ projectIndex: 0 }); console.log('if'); }
-      else {
-          this.setState({ projectIndex: this.state.projectIndex + 1 })
-      }
+    if (this.state.projectIndex === projects.length - 1) { this.setState({ projectIndex: 0 }); console.log('if'); }
+    else {
+      this.setState({ projectIndex: this.state.projectIndex + 1 })
+    }
   }
 
 
@@ -125,9 +136,9 @@ class App extends Component {
     return (
       <div className="App">
         <Intro>
-          <div style={{ backgroundColor: 'transparent', height: '100vh',  justifyContent: 'center', position: 'relative' }}>
-          <Background style={{ width: '100%' }} />
-            
+          <div style={{ backgroundColor: 'transparent', height: '100vh', justifyContent: 'center', position: 'relative' }}>
+            <Background style={{ width: '100%' }} />
+
             <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', height: '100%', width: '100%' }}>
               <Container style={{ width: '40vw' }}>
                 <div>
@@ -145,7 +156,7 @@ class App extends Component {
                 <h1> + </h1>
               </Container>
               <Container style={{ width: '25vw' }}>
-                <h1>I'm a 
+                <h1>I'm a
                 <span style={{ borderBottom: '30px solid #FFE600', paddingBottom: '-50px' }}> front end developer</span>
                 </h1>
               </Container>
@@ -153,19 +164,21 @@ class App extends Component {
           </div>
         </Intro>
 
-        <div style={{ display: 'flex', height: '90vh', flexDirection: 'row', justifyContent: 'space-evenly' }}>
+        <MainPage>
         <Background style={{ paddingTop: 0 }} />
-          <Profile />
-          <ProjectSection>
-            <Projects projects={projects} projectIndex={ this.state.projectIndex } />
-            <div  style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%' }}>
-              <button className="project-nav-button"  type="button" onClick={this.prevProject}> Prev</button>
-              <button  className="project-nav-button" type="button" onClick={this.nextProject}> Next</button>
-              <i className="fas fa-arrow-right"></i>
-            </div>
-          </ProjectSection>
-          <Experience project={ projects[this.state.projectIndex] } />
-        </div>
+        <Projects projects={projects} projectIndex={this.state.projectIndex} />
+
+
+          {/* <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', height: '100%', width: '100%' }}>
+            <Background style={{ paddingTop: 0 }} />
+            <Profile />
+            <ProjectSection>
+              <Projects projects={projects} projectIndex={this.state.projectIndex} />
+
+            </ProjectSection>
+            <Experience project={ projects[this.state.projectIndex] } />
+          </div> */}
+        </MainPage>
       </div>
     );
   }
