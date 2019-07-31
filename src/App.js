@@ -25,11 +25,17 @@ const ProjectSection = styled.div`
   height: 88vh;
   width: 55vw;
 
-  /* button {
+  .project-nav-button {
+    position: relative;
+    z-index: 1;
     border: 0;
     background-color: transparent;
     cursor: pointer;
-  } */
+
+    :hover {
+      text-decoration:underline;
+    }
+  }
 `;
 
 const Intro = styled.div`
@@ -151,8 +157,9 @@ class App extends Component {
           <ProjectSection>
             <Projects projects={projects} projectIndex={ this.state.projectIndex } />
             <div  style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%' }}>
-              <button style={{ position: relative, zIndex: 1 }} type="button" onClick={this.prevProject}> Prev</button>
-              <button style={{ position: relative, zIndex: 1 }} type="button" onClick={this.nextProject}> Next</button>
+              <button className="project-nav-button"  type="button" onClick={this.prevProject}> Prev</button>
+              <button  className="project-nav-button" type="button" onClick={this.nextProject}> Next</button>
+              <i className="fas fa-arrow-right"></i>
             </div>
           </ProjectSection>
           <Experience project={ projects[this.state.projectIndex] } />

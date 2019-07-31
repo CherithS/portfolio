@@ -156,6 +156,11 @@ p {
   align-items: center;
   cursor: pointer;
   margin: 10px;
+
+  &:hover {
+    background-color: rgb(255, 230, 0);
+    transition: background-color .5s;
+  }
 }
 
 
