@@ -56,27 +56,29 @@ const Container = styled.div`
 const greetings = ['Hola', 'Bonjour', 'Oh hai', 'Hello'];
 
 const projects = [
-  { id: 0, 
-    title: 'M.A.S.H.', 
-    description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.', 
-    role: 'Development + Design',
-    technologies: ['Angular 4+', 'SASS', 'Flexbox', 'Responsive Design', 'NPM']
-  },
   {
-    id: 1, 
+    id: 0, 
     title: 'U.S. Bank', 
     description: 'Splash page advertising the new iOS app for U.S. Bank', 
     role: 'Development',
-    technologies: ['React', 'ES6', 'GIT','a11y', 'Rapid Prototyping', 'Sketch', 'Cross Device Development', 'Webpack', 'SPA', 'Responsive Design']
+    technologies: ['React', 'ES6', 'GIT','a11y', 'Rapid Prototyping', 'Sketch', 'Cross Device Development', 'Webpack', 'SPA', 'Responsive Design'],
+    comingSoon: false
   },
   { 
-    id: 2, 
+    id: 1, 
     title: 'this.website', 
     description: 'My personal portfolio showcasing my', 
     role: 'Development + Design',
-    technologies: ['React', 'Adobe XD', 'After Effects', 'UX Design', 'Wireframing', 'NPM']
+    technologies: ['React', 'Adobe XD', 'After Effects', 'UX Design', 'Wireframing', 'NPM'],
+    comingSoon: false
   },
-  
+  { id: 2, 
+    title: 'M.A.S.H.', 
+    description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.', 
+    role: 'Development + Design',
+    technologies: ['Angular 4+', 'SASS', 'Flexbox', 'Responsive Design', 'NPM'],
+    comingSoon: true
+  }
 ];
 
 
