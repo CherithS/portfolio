@@ -46,18 +46,44 @@ class Projects extends Component {
         super(props);
         this.state = {
             backgroundColor: backgroundColor,
-            projects: projects,
+            // projects: projects,
             projectIndex: 0,
             selectedProject: projects[0]
         }
 
-        this.props.projects.map((project) => {
-            projects.push(project);
-        });
+        // this.props.projects.map((project) => {
+        //     console.log(project);
+        //     projects.push(project);
+        // });
+        //console.log(this.state.projects);
 
         // this.nextProject = this.nextProject
-
     }
+
+    prevProject = () => {
+        console.log('prev');
+        this.setState({
+          projectIndex: this.state.projectIndex - 1
+        })
+    
+        if (this.state.projectIndex === 0) { this.setState({ projectIndex: this.props.projects.length - 1 }); console.log('if'); }
+        else {
+          this.setState({
+            projectIndex: this.state.projectIndex - 1
+          })
+        }
+      }
+    
+      nextProject = () => {
+        this.setState({ projectIndex: this.state.projectIndex + 1 })
+        console.log('next');
+        console.log(projects);
+        console.log(this.state.projectIndex)
+        if (this.state.projectIndex === this.props.projects.length - 1) { this.setState({ projectIndex: 0 }); console.log('if'); }
+        else {
+          this.setState({ projectIndex: this.state.projectIndex + 1 })
+        }
+      }
 
     render() {
 
@@ -65,16 +91,16 @@ class Projects extends Component {
             <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', width: '50%   ', justifyContent: 'space-evenly' }}>
 
                 <div style={{ display: 'flex' }}>
-                    <h1 style={{ fontSize: '10em', margin: 0 }} >{this.props.projects[this.props.projectIndex].title}</h1>
+                    <h1 style={{ fontSize: '10vw', margin: 0 }} >{this.props.projects[this.state.projectIndex].title}</h1>
                 </div>
                 <div>
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <h1 style={{ width: 'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >Project Description: </h1>
-                        <p>{this.props.projects[this.props.projectIndex].description}</p>
+                        <p>{this.props.projects[this.state.projectIndex].description}</p>
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <h1 style={{ width: 'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >My Role: </h1>
-                        <p>{this.props.projects[this.props.projectIndex].role}</p>
+                        <p>{this.props.projects[this.state.projectIndex].role}</p>
                     </div>
                 </div>
                 {/* style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%' }} */}

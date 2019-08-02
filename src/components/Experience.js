@@ -32,7 +32,7 @@ const Outline = styled.div`
 `;
 
 
-const skills = ['React', 'React Native', 'Redux', 'Node.js', 'ES6', 'Angular 4+', 'HTML5', 'CSS3', 'SASS', 'Flexbox', 'GIT',
+const skills = ['React', 'Redux', 'ES6', 'Angular 4+', 'HTML5', 'CSS3', 'SASS', 'Flexbox', 'GIT',
     'Agile', 'JIRA', 'NPM', 'Unit Testing', 'AJAX', 'Restful APIs', 'Webpack', 'SPA', 'JSON', 'Responsive Design',
     'Gulp', 'Grunt', 'OOP', 'C#', '.Net Core', 'Rapid Prototyping', 'a11y', 'Wireframing', 'Interactive Design',
     'Cross Device Development', 'Photoshop', 'Illustrator', 'Adobe XD', 'Sketch', 'After Effects', 'UX Design'];

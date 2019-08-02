@@ -52,7 +52,7 @@ const MainPage = styled.div`
     width: 100%;
     flex-direction: row;
 
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 `;
 
@@ -60,7 +60,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 40vw;
 `;
 
 const greetings = ['Hola', 'Bonjour', 'Oh hai', 'Hello'];
@@ -140,17 +140,17 @@ class App extends Component {
             <Background style={{ width: '100%' }} />
 
             <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', height: '100%', width: '100%' }}>
-              <Container style={{ width: '40vw' }}>
+              <Container >
+
+                <h1 style={{ fontSize: '1.5em', borderBottom: '10px solid #FFE600', paddingBottom: '10px', width: 'fit-content' }}>Hello, my name is</h1>
                 <div>
-                  <div><h1 style={{ fontSize: '1.5em', borderBottom: '10px solid #FFE600', paddingBottom: '10px', width: 'fit-content' }}>Hello, my name is</h1></div>
-                  <div>
-                    <h1 style={{ fontSize: '5em', color: '#2E23C8', margin: 0 }}>
-                      CHERITH <br /> SIMM<span>
-                        <img style={{ borderRadius: '50%', width: '10vw', border: '9px solid white', verticalAlign: 'sub' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
-                      </span>NS
+                  <h1 style={{ fontSize: '5em', color: '#2E23C8', margin: 0 }}>
+                    CHERITH <br /> SIMM<span>
+                      <img style={{ borderRadius: '50%', width: '10vw', border: '9px solid white', verticalAlign: 'sub' }} src={'https://m.momn.to/0i54Gs_1080x1080.gif'} />
+                    </span>NS
                   </h1>
-                  </div>
                 </div>
+
               </Container>
               <Container style={{ width: '5vw' }}>
                 <h1> + </h1>
@@ -165,9 +165,11 @@ class App extends Component {
         </Intro>
 
         <MainPage>
-        <Background style={{ paddingTop: 0 }} />
-        <Projects projects={projects} projectIndex={this.state.projectIndex} />
-        <Experience project={ projects[this.state.projectIndex] } />
+          <Background style={{ paddingTop: 0 }} />
+          <Profile />
+          <Projects projects={projects} projectIndex={this.state.projectIndex} />
+          <Experience project={projects[this.state.projectIndex]} />
+
           {/* <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', height: '100%', width: '100%' }}>
             <Background style={{ paddingTop: 0 }} />
             <Profile />
