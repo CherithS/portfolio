@@ -40,10 +40,18 @@ const ProjectSection = styled.div`
 
 const Intro = styled.div`
     display: flex;
+    height: 100vh;
     width: 100%;
     flex-direction: column;
-    height: 100vh;
     justify-content: center;
+
+    .intro-content {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
 `;
 
 const MainPage = styled.div`
@@ -61,6 +69,11 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 40vw;
+
+    .name-content {
+      display:flex;
+      flex-direction: column;
+    }
 `;
 
 const greetings = ['Hola', 'Bonjour', 'Oh hai', 'Hello'];
@@ -136,13 +149,13 @@ class App extends Component {
     return (
       <div className="App">
         <Intro>
-          <div style={{ backgroundColor: 'transparent', height: '100vh', justifyContent: 'center', position: 'relative' }}>
-            <Background style={{ width: '100%' }} />
 
-            <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', height: '100%', width: '100%' }}>
-              <Container >
+          <Background style={{ width: '100%' }} />
 
-                <h1 style={{ fontSize: '1.5em', borderBottom: '10px solid #FFE600', paddingBottom: '10px', width: 'fit-content' }}>Hello, my name is</h1>
+          <div class="intro-content">
+            <Container >
+              <div class="name-content">
+                <div> <h1 >Hello, my name is</h1></div>
                 <div>
                   <h1 style={{ fontSize: '5em', color: '#2E23C8', margin: 0 }}>
                     CHERITH <br /> SIMM<span>
@@ -150,18 +163,21 @@ class App extends Component {
                     </span>NS
                   </h1>
                 </div>
+              </div>
+            </Container>
 
-              </Container>
-              <Container style={{ width: '5vw' }}>
-                <h1> + </h1>
-              </Container>
-              <Container style={{ width: '25vw' }}>
-                <h1>I'm a
+            <Container style={{ width: '5vw' }}>
+              <h1> + </h1>
+            </Container>
+
+            <Container style={{ width: '25vw' }}>
+              <h1>I'm a
                 <span style={{ borderBottom: '30px solid #FFE600', paddingBottom: '-50px' }}> front end developer</span>
-                </h1>
-              </Container>
-            </div>
+              </h1>
+            </Container>
+
           </div>
+
         </Intro>
 
         <MainPage>
