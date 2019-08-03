@@ -1,42 +1,56 @@
 import React, { Component } from 'react';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
 
-// const Row = styled.div`
-//     display: flex;
-//     flex-direction: row;
-//     width: fit-content;
-//     justify-content: space-evenly;
-// `;
 
-// const Card = styled.div`
-//     display: flex;
-//     flex-direction: row;
-//     height: 90%;
-//     width: 25vw;
-//     border: none;
-//     transition: .3s ease-in-out;
 
-//     .outline {
-//         display:flex;
-//         width: inherit;
-//         height: 40vh;
-//         margin: 15px 5px 5px 15px;
-//         flex-direction: column;
-//         position: absolute;
-//         background-color: transparent;
-//         justify-content: center;
-//         align-items: center;
-//         display: flex;
-//         border: solid 2px #ffc9cd;
-//     }
+const ProjectsContainer = styled.div`
+      display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    justify-content: space-evenly;
 
-//     h1:hover {      
-//         margin: 0px;
-//         cursor: pointer;
-//         transition: .3s ease-in-out;
-//     }
-// `;
+    h1 {
+        font-size: 10vw;
+        margin: 0;
+    }
+
+    .project-info {
+
+        
+        h1 {
+            width:fit-content;
+            font-size: 1.5em;
+            color: black;
+            border-bottom: 10px solid #FFE600;
+            padding-bottom: 10px;
+        }
+    }
+    .project-button-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .project-nav-button {
+            background: none;
+        }
+    }
+
+    .more-info-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end;
+        width: 100%;
+    }
+
+    .coming-soon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+`;
 
 var projects = [];
 var backgroundColor = '';
@@ -46,80 +60,70 @@ class Projects extends Component {
         super(props);
         this.state = {
             backgroundColor: backgroundColor,
-            // projects: projects,
             projectIndex: 0,
             selectedProject: projects[0]
         }
 
-        // this.props.projects.map((project) => {
-        //     console.log(project);
-        //     projects.push(project);
-        // });
-        //console.log(this.state.projects);
-
-        // this.nextProject = this.nextProject
     }
 
     prevProject = () => {
         console.log('prev');
         this.setState({
-          projectIndex: this.state.projectIndex - 1
+            projectIndex: this.state.projectIndex - 1
         })
-    
+
         if (this.state.projectIndex === 0) { this.setState({ projectIndex: this.props.projects.length - 1 }); console.log('if'); }
         else {
-          this.setState({
-            projectIndex: this.state.projectIndex - 1
-          })
+            this.setState({
+                projectIndex: this.state.projectIndex - 1
+            })
         }
-      }
-    
-      nextProject = () => {
+    }
+
+    nextProject = () => {
         this.setState({ projectIndex: this.state.projectIndex + 1 })
         console.log('next');
         console.log(projects);
         console.log(this.state.projectIndex)
         if (this.state.projectIndex === this.props.projects.length - 1) { this.setState({ projectIndex: 0 }); console.log('if'); }
         else {
-          this.setState({ projectIndex: this.state.projectIndex + 1 })
+            this.setState({ projectIndex: this.state.projectIndex + 1 })
         }
-      }
+    }
 
     render() {
 
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', width: '50%   ', justifyContent: 'space-evenly' }}>
+            <ProjectsContainer>
 
-                <div style={{ display: 'flex' }}>
-                    <h1 style={{ fontSize: '10vw', margin: 0 }} >{this.props.projects[this.state.projectIndex].title}</h1>
-                </div>
+                <h1>{this.props.projects[this.state.projectIndex].title}</h1>
+
                 <div>
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <h1 style={{ width: 'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >Project Description: </h1>
+                    <div class="project-info">
+                        <h1>Project Description: </h1>
                         <p>{this.props.projects[this.state.projectIndex].description}</p>
                     </div>
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <h1 style={{ width: 'fit-content', fontSize: '1.5em', color: 'black', borderBottom: '10px solid #FFE600', paddingBottom: '10px' }} >My Role: </h1>
+                    <div class="project-info">
+                        <h1>My Role: </h1>
                         <p>{this.props.projects[this.state.projectIndex].role}</p>
                     </div>
                 </div>
-                {/* style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%' }} */}
-                <div >
+                <div class="project-button-container">
                     <button className="project-nav-button" type="button" onClick={this.prevProject}> Prev</button>
                     <button className="project-nav-button" type="button" onClick={this.nextProject}> Next</button>
                 </div>
-                {/* { !this.props.projects[this.props.projectIndex].comingSoon &&
-                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: '100%' }}>
+                {!this.props.projects[this.state.projectIndex].comingSoon &&
+                    <div className="more-info-buttons">
                         <button className='styled-button' ><h1 style={{ margin: 0, fontSize: 15 }} >Project</h1></button>
                         <button className='styled-button' ><h1 style={{ margin: 0, fontSize: 15 }} >Process</h1></button>
                     </div>
                 }
-                { this.props.projects[this.props.projectIndex].comingSoon &&
-                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: '100%' }}>
-                        <p style={{fontWeight: 800}}>(Coming Soon)</p>
+                {this.props.projects[this.state.projectIndex].comingSoon &&
+                    <div class="coming-soon">
+                        <p style={{ fontWeight: 800 }}>(Coming Soon)</p>
                     </div>
-                } */}
-            </div>
+                }
+            </ProjectsContainer>
         );
     }
 }
