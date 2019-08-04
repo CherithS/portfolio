@@ -80,7 +80,7 @@ class Projects extends Component {
                 </div>
                 {!this.props.projects[this.props.projectIndex].comingSoon &&
                     <div className="more-info-buttons">                    
-                        <button className='styled-button'><a href={{projectUrl}}>Project</a></button>
+                        <button className='styled-button'><a href={this.props.projects[this.props.projectIndex].url} target="_blank">Project</a></button>
                         <button className='styled-button'>Process</button>
                     </div>
                 }

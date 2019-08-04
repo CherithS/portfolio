@@ -46,23 +46,6 @@ const ProjectSection = styled.div`
             }
         }
     }
-
-  /* display: flex;
-  flex-direction: column;
-  height: 80%;
-  width: 55vw;
-
-  .project-nav-button {
-    position: relative;
-    z-index: 1;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-
-    :hover {
-      text-decoration:underline;
-    }
-  } */
 `;
 
 const Intro = styled.div`
@@ -118,6 +101,9 @@ const Container = styled.div`
     }
 `;
 
+const prev = '< PREV';
+const next = 'NEXT >';
+
 const greetings = ['Hola', 'Bonjour', 'Oh hai', 'Hello'];
 
 const projects = [
@@ -128,7 +114,8 @@ const projects = [
     role: 'Development',
     technologies: ['React', 'ES6', 'GIT', 'a11y', 'Rapid Prototyping', 'Sketch', 'Cross Device Development', 'Webpack', 'SPA', 'Responsive Design'],
     comingSoon: false,
-    url: 'https://www.usbank.com/splash/digital-banking/new-mobile-app/index.html'
+    url: 'https://www.usbank.com/splash/digital-banking/new-mobile-app/index.html',
+    process: false
   },
   {
     id: 1,
@@ -137,7 +124,8 @@ const projects = [
     role: 'Development + Design',
     technologies: ['React', 'Adobe XD', 'After Effects', 'UX Design', 'Wireframing', 'NPM'],
     comingSoon: false,
-    url: ''
+    url: '',
+    process: true
   },
   {
     id: 2,
@@ -146,7 +134,8 @@ const projects = [
     role: 'Development + Design',
     technologies: ['Angular 4+', 'SASS', 'Flexbox', 'Responsive Design', 'NPM'],
     comingSoon: true,
-    url: ''
+    url: '',
+    process: false
   }
 ];
 
@@ -231,8 +220,8 @@ class App extends Component {
           <ProjectSection>
             <Projects projects={projects} projectIndex={this.state.projectIndex} />
             <div className="project-button-container">
-              <button className="project-nav-button" type="button" onClick={this.prevProject}> Prev</button>
-              <button className="project-nav-button" type="button" onClick={this.nextProject}> Next</button>
+              <button className="project-nav-button" type="button" onClick={this.prevProject}> {prev}</button>
+              <button className="project-nav-button" type="button" onClick={this.nextProject}> {next} </button>
             </div>
           </ProjectSection>
           <Experience project={projects[this.state.projectIndex]} />

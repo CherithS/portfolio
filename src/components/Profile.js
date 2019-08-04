@@ -64,7 +64,8 @@ const MiddleProfile = styled.div`
             text-align: center;
             color: #343435;
             padding: 0;
-                margin: 0;
+            margin: 0;
+            margin-top: 5px;
 
             &:first-child {
                 font-weight: 800;
@@ -72,6 +73,10 @@ const MiddleProfile = styled.div`
                 padding: 0;
                 margin: 0;
             }
+        }
+
+        .mini-text {
+            font-size: .6em;
         }
     }
 `;
@@ -87,6 +92,7 @@ class Profile extends Component {
                         <div className="bio-title">
                             <p>CHERITH SIMMONS</p>
                             <p>Front End Developer</p>
+                            <p className="mini-text">(and sometimes designer)</p>
                         </div>
                         <Box>
                             <p style={{ fontSize: '1em', textAlign: 'left' }}><span style={{ fontWeight: 800 }}>Likes:</span> Challenging convos, sushi, Netflix, learning, ethically-made clothing</p>
