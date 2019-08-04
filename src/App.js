@@ -6,18 +6,9 @@ import Profile from './components/Profile';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Background from './components/Background'
+import Process from './components/Process';
 import { relative } from 'path';
 
-
-
-// const Box = styled.div`
-//     font-size: 12px;
-//     text-align: left;
-//     background-color: white;
-//     border: 1px solid pink;
-//     box-shadow: 10px 15px pink;
-//     padding: 15px;
-// `;
 
 const ProjectSection = styled.div`
     height: 70%;
@@ -226,6 +217,9 @@ class App extends Component {
           </ProjectSection>
           <Experience project={projects[this.state.projectIndex]} />
         </MainPage>
+        <Process>
+
+        </Process>
       </div>
     );
   }
