@@ -75,7 +75,8 @@ const Intro = styled.div`
     .black-outline {
       width: 85%;
       height: 90%;
-      border: 3px solid #eeecff;
+      border: 1px solid #c2bfbf;
+      /* border: 3px solid #eeecff; */
       position: absolute;
       left: 5%;
       /* background-color: #eeecff; */

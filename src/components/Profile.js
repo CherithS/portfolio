@@ -22,9 +22,11 @@ const Box = styled.div`
 
 const Section = styled.div`
     position: relative;
-    box-shadow: -10px 15px #2E23C8;
+    /* box-shadow: -10px 15px #2E23C8; */
     height: 90%;
-    border: solid 1px #0A3A38;
+    /* border: solid 1px #0A3A38; */
+    /* border: 1px solid #646464; */
+
 
     display: flex;
     flex-direction: column;
