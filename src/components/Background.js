@@ -14,7 +14,7 @@ const Background = () => {
     }
    
     return (
-      <div style={{display: 'flex', position: 'absolute', height: '100%', paddingTop:'10px', width:'100%',  alignItems: 'center', overflow:'hidden'}}>
+      <div style={{display: 'flex', position: 'absolute', height: '96%', paddingTop:'10px', width:'100%',  alignItems: 'center', overflow:'hidden'}}>
         <ReactBodymovin options={bodymovinOptions} />
       </div>
     )

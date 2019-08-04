@@ -72,6 +72,20 @@ const Intro = styled.div`
     flex-direction: column;
     justify-content: center;
 
+    .black-outline {
+      width: 85%;
+      height: 90%;
+      border: 3px solid #eeecff;
+      position: absolute;
+      left: 5%;
+      /* background-color: #eeecff; */
+
+      /* width: 50%;
+      height:50%;
+      border: 1px solid black; */
+     
+    }
+
     .intro-content {
       display: flex;
       justify-content: center;
@@ -179,9 +193,9 @@ class App extends Component {
     return (
       <div className="App">
         <Intro>
-
+        <div className="black-outline"></div>
           <Background style={{ width: '100%' }} />
-
+         
           <div className="intro-content">
             <Container >
               <div className="name-content">
