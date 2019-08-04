@@ -91,7 +91,7 @@ class Profile extends Component {
                         </Box>
 
                         <Box>
-                            <p style={{ fontSize: '1em', textAlign: 'left' }}><span style={{ fontWeight: 800 }}>Dislikes:</span> Negativity, stereotypnpm starting, puppy mills, slow internet, employees-only restrooms, long lines</p>
+                            <p style={{ fontSize: '1em', textAlign: 'left' }}><span style={{ fontWeight: 800 }}>Dislikes:</span> Negativity, stereotyping, puppy mills, slow internet, long lines</p>
                         </Box>
                         {/* style={{ display:'flex', width: 'inherit', height: '5vh', backgroundColor: 'white', border: '5px solid #FFE600', justifyContent: 'center', flexDirection: 'center', alignItems: 'center', cursor: 'pointer' }} */}
                         <div className="styled-button" >

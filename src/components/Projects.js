@@ -84,7 +84,7 @@ class Projects extends Component {
                         <button className='styled-button'>Process</button>
                     </div>
                 }
-                {this.props.projects[this.state.projectIndex].comingSoon &&
+                {this.props.projects[this.props.projectIndex].comingSoon &&
                     <div className="coming-soon">
                         <p style={{ fontWeight: 800 }}>(Coming Soon)</p>
                     </div>
