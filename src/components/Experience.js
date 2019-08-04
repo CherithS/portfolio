@@ -50,7 +50,8 @@ function Skills(props) {
 
             return (
                 <div key={idx}>
-                    <li key={idx} style={{ marginTop: 4, padding: 3, border: isUsed ? 'solid 3px blue' : 'none' }} >{s}</li>
+                    {/* <li key={idx} style={{ marginTop: 4, padding: 3, backgroundColor: isUsed ? 'yellow' : 'none' }} >{s}</li> */}
+                    <li key={idx} style={{ marginTop: 4, padding: 3, border: isUsed ? 'solid 1px blue' : 'solid 1px transparent' }} >{s}</li>
                 </div>
             )
         })
