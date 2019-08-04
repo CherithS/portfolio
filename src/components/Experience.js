@@ -13,7 +13,7 @@ import styled from 'styled-components';
 // `;
 
 const ExperienceContainer = styled.div`
-    height: 88vh;
+    height: 88%;
     width: 20vw;
     position: relative;
     border: none;
@@ -21,7 +21,7 @@ const ExperienceContainer = styled.div`
     `;
 
 const Outline = styled.div`
-    height: 85vh;
+    height: 85%;
     width: inherit;
     margin: 5;
     margin-left: 15;

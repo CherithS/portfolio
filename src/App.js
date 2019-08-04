@@ -20,7 +20,34 @@ import { relative } from 'path';
 // `;
 
 const ProjectSection = styled.div`
-  display: flex;
+    height: 70%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: .5px solid black;
+    padding: 35px;
+
+    .project-button-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .project-nav-button {
+            background: none;
+            position: relative;
+            z-index: 1;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+
+            :hover {
+              text-decoration:underline;
+            }
+        }
+    }
+
+  /* display: flex;
   flex-direction: column;
   height: 80%;
   width: 55vw;
@@ -35,7 +62,7 @@ const ProjectSection = styled.div`
     :hover {
       text-decoration:underline;
     }
-  }
+  } */
 `;
 
 const Intro = styled.div`
@@ -85,7 +112,8 @@ const projects = [
     description: 'Splash page advertising the new iOS app for U.S. Bank',
     role: 'Development',
     technologies: ['React', 'ES6', 'GIT', 'a11y', 'Rapid Prototyping', 'Sketch', 'Cross Device Development', 'Webpack', 'SPA', 'Responsive Design'],
-    comingSoon: false
+    comingSoon: false,
+    url: 'https://www.usbank.com/splash/digital-banking/new-mobile-app/index.html'
   },
   {
     id: 1,
@@ -93,7 +121,8 @@ const projects = [
     description: 'My personal portfolio showcasing my',
     role: 'Development + Design',
     technologies: ['React', 'Adobe XD', 'After Effects', 'UX Design', 'Wireframing', 'NPM'],
-    comingSoon: false
+    comingSoon: false,
+    url: ''
   },
   {
     id: 2,
@@ -101,7 +130,8 @@ const projects = [
     description: 'A redesigned interactive front-end experience inspired by the childhood game M.A.S.H.',
     role: 'Development + Design',
     technologies: ['Angular 4+', 'SASS', 'Flexbox', 'Responsive Design', 'NPM'],
-    comingSoon: true
+    comingSoon: true,
+    url: ''
   }
 ];
 
@@ -152,9 +182,9 @@ class App extends Component {
 
           <Background style={{ width: '100%' }} />
 
-          <div class="intro-content">
+          <div className="intro-content">
             <Container >
-              <div class="name-content">
+              <div className="name-content">
                 <div> <h1 >Hello, my name is</h1></div>
                 <div>
                   <h1 style={{ fontSize: '5em', color: '#2E23C8', margin: 0 }}>
@@ -183,18 +213,14 @@ class App extends Component {
         <MainPage>
           <Background style={{ paddingTop: 0 }} />
           <Profile />
-          <Projects projects={projects} projectIndex={this.state.projectIndex} />
+          <ProjectSection>
+            <Projects projects={projects} projectIndex={this.state.projectIndex} />
+            <div className="project-button-container">
+              <button className="project-nav-button" type="button" onClick={this.prevProject}> Prev</button>
+              <button className="project-nav-button" type="button" onClick={this.nextProject}> Next</button>
+            </div>
+          </ProjectSection>
           <Experience project={projects[this.state.projectIndex]} />
-
-          {/* <div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', height: '100%', width: '100%' }}>
-            <Background style={{ paddingTop: 0 }} />
-            <Profile />
-            <ProjectSection>
-              <Projects projects={projects} projectIndex={this.state.projectIndex} />
-
-            </ProjectSection>
-            <Experience project={ projects[this.state.projectIndex] } />
-          </div> */}
         </MainPage>
       </div>
     );

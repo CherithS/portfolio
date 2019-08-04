@@ -5,10 +5,10 @@ import styled from 'styled-components';
 
 
 const ProjectsContainer = styled.div`
-      display: flex;
+    display: flex;
     flex-direction: column;
     position: relative;
-    width: 50%;
+    /* width: 50%; */
     justify-content: space-evenly;
 
     h1 {
@@ -18,7 +18,6 @@ const ProjectsContainer = styled.div`
 
     .project-info {
 
-        
         h1 {
             width:fit-content;
             font-size: 1.5em;
@@ -27,15 +26,7 @@ const ProjectsContainer = styled.div`
             padding-bottom: 10px;
         }
     }
-    .project-button-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
 
-        .project-nav-button {
-            background: none;
-        }
-    }
 
     .more-info-buttons {
         display: flex;
@@ -54,6 +45,7 @@ const ProjectsContainer = styled.div`
 
 var projects = [];
 var backgroundColor = '';
+var projectUrl;
 
 class Projects extends Component {
     constructor(props) {
@@ -63,32 +55,10 @@ class Projects extends Component {
             projectIndex: 0,
             selectedProject: projects[0]
         }
-
-    }
-
-    prevProject = () => {
-        console.log('prev');
-        this.setState({
-            projectIndex: this.state.projectIndex - 1
-        })
-
-        if (this.state.projectIndex === 0) { this.setState({ projectIndex: this.props.projects.length - 1 }); console.log('if'); }
-        else {
-            this.setState({
-                projectIndex: this.state.projectIndex - 1
-            })
-        }
-    }
-
-    nextProject = () => {
-        this.setState({ projectIndex: this.state.projectIndex + 1 })
-        console.log('next');
-        console.log(projects);
-        console.log(this.state.projectIndex)
-        if (this.state.projectIndex === this.props.projects.length - 1) { this.setState({ projectIndex: 0 }); console.log('if'); }
-        else {
-            this.setState({ projectIndex: this.state.projectIndex + 1 })
-        }
+        console.log(this.props.projects);
+        console.log(this.state.projectIndex);
+        this.projectUrl = this.props.projects[this.state.projectIndex].url;
+        console.log('url: ' + this.projectUrl);
     }
 
     render() {
@@ -96,33 +66,31 @@ class Projects extends Component {
         return (
             <ProjectsContainer>
 
-                <h1>{this.props.projects[this.state.projectIndex].title}</h1>
+                <h1>{this.props.projects[this.props.projectIndex].title}</h1>
 
                 <div>
-                    <div class="project-info">
+                    <div className="project-info">
                         <h1>Project Description: </h1>
-                        <p>{this.props.projects[this.state.projectIndex].description}</p>
+                        <p>{this.props.projects[this.props.projectIndex].description}</p>
                     </div>
-                    <div class="project-info">
+                    <div className="project-info">
                         <h1>My Role: </h1>
-                        <p>{this.props.projects[this.state.projectIndex].role}</p>
+                        <p>{this.props.projects[this.props.projectIndex].role}</p>
                     </div>
                 </div>
-                <div class="project-button-container">
-                    <button className="project-nav-button" type="button" onClick={this.prevProject}> Prev</button>
-                    <button className="project-nav-button" type="button" onClick={this.nextProject}> Next</button>
-                </div>
-                {!this.props.projects[this.state.projectIndex].comingSoon &&
-                    <div className="more-info-buttons">
-                        <button className='styled-button' ><h1 style={{ margin: 0, fontSize: 15 }} >Project</h1></button>
-                        <button className='styled-button' ><h1 style={{ margin: 0, fontSize: 15 }} >Process</h1></button>
+                {!this.props.projects[this.props.projectIndex].comingSoon &&
+                    <div className="more-info-buttons">                    
+                        <button className='styled-button'><a href={{projectUrl}}>Project</a></button>
+                        <button className='styled-button'>Process</button>
                     </div>
                 }
                 {this.props.projects[this.state.projectIndex].comingSoon &&
-                    <div class="coming-soon">
+                    <div className="coming-soon">
                         <p style={{ fontWeight: 800 }}>(Coming Soon)</p>
                     </div>
                 }
+     
+            
             </ProjectsContainer>
         );
     }
