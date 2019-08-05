@@ -94,7 +94,7 @@ const ProgressImgs = styled.div`
 class Process extends Component {
     render() {
         return (
-            <ProcessSection>
+            <ProcessSection id="process-section">
                 <ProgressText>
                     <p>ew...</p>
                     <p>ew...</p>
@@ -120,7 +120,7 @@ class Process extends Component {
                         <img src={image2} />
                         </div>
                     </div>
-                    <div class="img-container">
+                    <div className="img-container">
                         <div className="image">
                             <img src={image4} />
                         </div>
@@ -136,7 +136,7 @@ class Process extends Component {
                             <img src={image6} />
                         </div>
                     </div>
-                    <div class="img-container">
+                    <div className="img-container">
                         <div className="image" style={{marginBottom: "-75px"}}>
                             <img src={image8} />
                         </div>

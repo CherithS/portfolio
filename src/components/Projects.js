@@ -56,6 +56,10 @@ class Projects extends Component {
         this.projectUrl = this.props.projects[this.state.projectIndex].url;
     }
 
+    goToProcess(){
+        console.log('go to process...');
+    }
+
     render() {
 
         return (
@@ -78,7 +82,7 @@ class Projects extends Component {
                             <button className='styled-button'><a href={this.props.projects[this.props.projectIndex].url} target="_blank">Go to Project</a></button>
                         }
                         {this.props.projects[this.props.projectIndex].process &&
-                            <button className='styled-button'>Process</button>
+                            <button onClick={this.goToProcess} className='styled-button'> <a href="#process-section">Process</a></button>
                         }
 
                     </div>
