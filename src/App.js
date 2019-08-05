@@ -94,7 +94,7 @@ const projects = [
   {
     id: 0,
     title: 'U.S. Bank',
-    description: 'Splash page advertising the new iOS app for U.S. Bank',
+    description: 'Splash page advertising the new iOS app for U.S. Bank.',
     role: 'Development',
     technologies: ['React', 'ES6', 'GIT', 'a11y', 'Rapid Prototyping', 'Sketch', 'Cross Device Development', 'Webpack', 'SPA', 'Responsive Design'],
     comingSoon: false,
@@ -104,7 +104,7 @@ const projects = [
   {
     id: 1,
     title: 'this.website',
-    description: 'My personal portfolio showcasing my',
+    description: 'This very website you are looking at now.',
     role: 'Development + Design',
     technologies: ['React', 'Adobe XD', 'After Effects', 'UX Design', 'Wireframing', 'NPM'],
     comingSoon: false,
@@ -128,7 +128,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      projectIndex: 0
+      projectIndex: 0,
+      showProcess: false
     };
   }
 
@@ -210,9 +211,10 @@ class App extends Component {
           </ProjectSection>
           <Experience project={projects[this.state.projectIndex]} />
         </MainPage>
-        <Process>
 
-        </Process>
+        { projects[this.state.projectIndex].process && 
+            <Process />
+        }
       </div>
     );
   }

@@ -8,7 +8,6 @@ const ProjectsContainer = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
-    /* width: 50%; */
     justify-content: space-evenly;
 
     h1 {
@@ -45,7 +44,6 @@ const ProjectsContainer = styled.div`
 
 var projects = [];
 var backgroundColor = '';
-var projectUrl;
 
 class Projects extends Component {
     constructor(props) {
@@ -55,17 +53,13 @@ class Projects extends Component {
             projectIndex: 0,
             selectedProject: projects[0]
         }
-        console.log(this.props.projects);
-        console.log(this.state.projectIndex);
         this.projectUrl = this.props.projects[this.state.projectIndex].url;
-        console.log('url: ' + this.projectUrl);
     }
 
     render() {
 
         return (
             <ProjectsContainer>
-
                 <h1>{this.props.projects[this.props.projectIndex].title}</h1>
 
                 <div>
@@ -79,9 +73,14 @@ class Projects extends Component {
                     </div>
                 </div>
                 {!this.props.projects[this.props.projectIndex].comingSoon &&
-                    <div className="more-info-buttons">                    
-                        <button className='styled-button'><a href={this.props.projects[this.props.projectIndex].url} target="_blank">Project</a></button>
-                        <button className='styled-button'>Process</button>
+                    <div className="more-info-buttons">
+                        {this.props.projects[this.props.projectIndex].id !== 1 &&
+                            <button className='styled-button'><a href={this.props.projects[this.props.projectIndex].url} target="_blank">Go to Project</a></button>
+                        }
+                        {this.props.projects[this.props.projectIndex].process &&
+                            <button className='styled-button'>Process</button>
+                        }
+
                     </div>
                 }
                 {this.props.projects[this.props.projectIndex].comingSoon &&
@@ -89,8 +88,7 @@ class Projects extends Component {
                         <p style={{ fontWeight: 800 }}>(Coming Soon)</p>
                     </div>
                 }
-     
-            
+
             </ProjectsContainer>
         );
     }
