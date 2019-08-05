@@ -27,7 +27,7 @@ const ProgressText = styled.div`
     /* height: 90%; */
     width: 25%;
     /* background-color: lavender; */
-    border: 5px solid lavender;
+    /* border: 5px solid lavender; */
     justify-content: space-evenly;
 
     p {
@@ -44,7 +44,7 @@ const ProgressImgs = styled.div`
     flex-direction: column;
     align-items: center;
     /* height: 90%; */
-    width: 65%;
+    width: 60%;
     /* background-color: lightgreen; */
     border: 5px solid lavender;
 
@@ -52,55 +52,43 @@ const ProgressImgs = styled.div`
         display:flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center;    
         height: 100%;
         width: 90%;
-        border: 5px solid lavender;
-        background-color: yellow;
-        /* background-color: lavender; */
+        margin-top: 25px;
 
-        .image-row {
-            display:flex;
-            flex-direction: row;
-            height: 100%;
-            width: 100%;
+          /* .img-container > .img */
+
+        .image {
+            width: 80%;
+            background-color: coral;
+            /* border: 1px solid black; */
+            margin-top: 10px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                /* margin-left: -200px; */
+            }
         }
 
         .bottom-image-row {
             display: flex;
             flex-direction: row;
-            border: 1px solid black;
+            justify-content: space-between;
+           
             height: 60%;
-            width: 80%;
-            background-color: green;
+            width: 100%;
+            margin-top: 25px;
 
             img {
                 width:50%;
+                /* border: 1px solid black; */
             }
+            
         };
         
-        img {
-            height: 100%;
-            /* width: 100%; */
-        }
-    }
-    
-
-    .image {
-        /* height: 75%; */
-        /* height: 100%; */
-        width: 80%;
-        background-color: coral;
-        border: 1px solid black;
-        /* background-size: cover;
-        background: transparent url('../assets/process-imgs/portfolio-1.JPG') no-repeat fixed center; */
-
-        img {
-            height: 100%;
-            width: 100%;
-        }
-    }
-    
+    }  
 `;
 
 class Process extends Component {
@@ -123,12 +111,13 @@ class Process extends Component {
                 </ProgressText>
                 <ProgressImgs>
                     <div className="img-container">
-                        <div className="image" style={{marginTop: "-120px"}}>
+                        <div className="image" style={{ marginTop: "-120px" }}>
                             <img src={image1} />
                         </div>
-                        <div className="bottom-image-row">
-                            <img src={image2} />
-                            <img src={image3} />
+                    </div>
+                    <div className="img-container">
+                        <div className="image">
+                        <img src={image2} />
                         </div>
                     </div>
                     <div class="img-container">
@@ -141,14 +130,14 @@ class Process extends Component {
                     </div>
                     <div className="img-container">
                         <div className="image">
-                            <img src={image6} />
+                            <img src={image7} />
                         </div>
                         <div className="image">
-                            <img src={image7} />
+                            <img src={image6} />
                         </div>
                     </div>
                     <div class="img-container">
-                        <div className="image">
+                        <div className="image" style={{marginBottom: "-75px"}}>
                             <img src={image8} />
                         </div>
                     </div>

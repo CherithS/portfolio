@@ -50,15 +50,8 @@ const Intro = styled.div`
       width: 85%;
       height: 90%;
       border: 1px solid #c2bfbf;
-      /* border: 3px solid #eeecff; */
       position: absolute;
-      left: 5%;
-      /* background-color: #eeecff; */
-
-      /* width: 50%;
-      height:50%;
-      border: 1px solid black; */
-     
+      left: 5%; 
     }
 
     .intro-content {
